@@ -269,6 +269,7 @@ function Nova() {
       <NovaTable />
       <NovaDeliverables />
       <NovaMethodology />
+      <NovaReel />
     </section>
   );
 }
