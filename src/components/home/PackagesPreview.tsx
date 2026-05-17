@@ -3,6 +3,7 @@ import { useInView } from '../../hooks/useInView';
 import { Link } from 'react-router-dom';
 import { Check, Star } from 'lucide-react';
 import { PACKAGES } from '../../data/services';
+import { TextureButton } from '@/components/ui/texture-button';
 
 export default function PackagesPreview() {
   const { ref, isInView } = useInView();
@@ -70,15 +71,22 @@ export default function PackagesPreview() {
 
               <Link
                 to="/contact"
-                className="mt-8 block w-full text-center py-3 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-[1.02]"
-                style={{
-                  backgroundColor: pkg.popular ? 'var(--color-accent)' : 'transparent',
-                  color: pkg.popular ? '#F5F1E8' : 'var(--color-text)',
-                  borderWidth: pkg.popular ? 0 : 1,
-                  borderColor: 'var(--color-border-strong)',
-                }}
+                className="mt-8 block transition-transform duration-300 hover:scale-[1.02]"
               >
-                Select Plan
+                <TextureButton
+                  variant={pkg.popular ? 'primary' : 'minimal'}
+                  size="lg"
+                  className="rounded-full"
+                >
+                  <span
+                    className="block w-full text-center py-1 text-sm font-semibold"
+                    style={{
+                      color: pkg.popular ? '#F5F1E8' : 'var(--color-text)',
+                    }}
+                  >
+                    Select Plan
+                  </span>
+                </TextureButton>
               </Link>
             </motion.div>
           ))}

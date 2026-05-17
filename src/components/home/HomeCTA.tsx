@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../../hooks/useInView';
 import { ArrowRight } from 'lucide-react';
+import { TextureButton } from '@/components/ui/texture-button';
 
 export default function HomeCTA() {
   const { ref, isInView } = useInView();
@@ -45,11 +46,17 @@ export default function HomeCTA() {
                 href="https://aireasolutions.com/book"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold rounded-full bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-                style={{ color: 'var(--color-accent)' }}
+                className="group inline-block transition-transform duration-300 hover:scale-[1.02]"
               >
-                Book Your Strategy Call
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                <TextureButton variant="secondary" size="lg" className="w-auto rounded-full">
+                  <span
+                    className="inline-flex items-center gap-3 px-6 py-2 text-sm font-semibold"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
+                    Book Your Strategy Call
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </TextureButton>
               </a>
               <p className="mt-4 text-xs text-white/50">
                 No commitment required. 30-minute call. Nicolas Santos on every call.
