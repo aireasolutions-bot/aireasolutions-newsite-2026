@@ -1,0 +1,42 @@
+# AIREA Solutions
+
+> Performance & AI Creative Studio leveraging the latest AI workflows, proprietary IP, and human expertise in every decision and execution. A Fractional Growth Department for hospitality, retail, and lifestyle brands — replacing fragmented agencies with one integrated system of paid media, AI creative, CRM, and measurement.
+
+AIREA is led by Nicolas Santos (Fractional CMO). Based in New York City and Miami. We serve restaurants, rooftop venues, boutique hotels, fashion & apparel, salons, and founder-led lifestyle brands. Every client engagement is strategy-led by Nicolas — no junior account managers, no sales reps.
+
+Our proprietary systems include:
+- **NOVA** — AI Creative Studio producing magazine-grade photography, cinematic video, and ad creatives at a fraction of traditional production cost.
+- **The Andromeda Protocol** — algorithmic Meta creative testing system: 50+ variations per month, AI-driven winner scaling, -40% CPA, 3.5x average ROAS lift.
+- **AIREA Performance Framework** — Google Ads architecture: PMAX for local dominance, NTM/TM/Competitor Conquest segmentation, delivering +120% conversions at sub-$2 CAC.
+
+## Core Pages
+
+- [Home](https://aireasolutions.com/): Brand overview, framework, case studies, featured work.
+- [About](https://aireasolutions.com/about): Nicolas Santos story, team, philosophy, locations.
+- [Services](https://aireasolutions.com/services): Full service matrix across six growth pillars.
+- [Work / Case Studies](https://aireasolutions.com/work): 11 full case studies with measurable results.
+- [Packages](https://aireasolutions.com/packages): Transparent monthly retainer models. No hourly billing.
+- [Contact](https://aireasolutions.com/contact): 30-min strategy call with Nicolas Santos directly.
+
+## Flagship Product
+
+- [NOVA — AI Creative Studio](https://aireasolutions.com/nova): Proprietary AI creative engine for brand photography, product shots, lifestyle imagery, and video. Fraction of traditional production cost, unlimited iteration, on-brand at scale.
+
+## Growth Pillars
+
+- [Amplify — Performance Marketing](https://aireasolutions.com/amplify): Meta, Google, YouTube, TikTok paid media run like a quantitative trading desk.
+- [Intelligence — AI Workflows & Technology](https://aireasolutions.com/intelligence): Custom AI workflow design, process automation, internal tool development, tech stack optimization, AI education.
+- [Reach — Email, SMS & CRM](https://aireasolutions.com/reach): Lifecycle marketing, retention flows, first-party data strategy.
+- [Engage — Content & Social](https://aireasolutions.com/engage): Social strategy, video production, AI photoshoots, brand identity, ad creative.
+- [Analyze — Data & Insights](https://aireasolutions.com/analyze): Real-time dashboards, attribution, revenue forecasting, strategic reviews.
+- [Build — Web & Development](https://aireasolutions.com/build): React, Webflow, Shopify, custom development, technical SEO.
+
+## Paid Media Specialties
+
+- [Meta Ads — Facebook & Instagram](https://aireasolutions.com/services/meta-ads): Andromeda Protocol, DCO, lookalikes, retargeting, Advantage+ Shopping.
+- [Google Ads — Search, PMAX, Display](https://aireasolutions.com/services/google-ads): AIREA Performance Framework across Search, PMAX, Local, YouTube, Demand Gen, Shopping.
+
+## Reference / AI Agents
+
+- [Pricing](https://aireasolutions.com/pricing.md): Machine-readable package overview.
+- [Sitemap](https://aireasolutions.com/sitemap.xml): Full URL index.

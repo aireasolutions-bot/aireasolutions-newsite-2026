@@ -1,23 +1,23 @@
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
-
-# Design package extracted from claude.ai/design — not part of the site
-_design_package/
-
-# Local Vercel link (per-machine)
-.vercel/
-
-# Claude Code per-machine settings
-.claude/
-
-# Logs / deps (in case anyone adds tooling later)
-node_modules/
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 .env
-.env.local

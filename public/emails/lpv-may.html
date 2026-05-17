@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Le Petit Village — May 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #F2EDE6;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      background-color: #FFFFFF;
+      padding: 36px 48px 28px;
+      text-align: center;
+      border-bottom: 1px solid #E8E2DA;
+    }
+
+    .header-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8.5px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 14px;
+    }
+
+    .header-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: #18120D;
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+
+    .header-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: #8C7C6E;
+      margin-top: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── HERO ─── */
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      padding: 36px 56px 44px;
+      text-align: left;
+      background-color: #FFFFFF;
+    }
+
+    .hero-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: #18120D;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #7A6A5E;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* ─── INTRO ─── */
+    .intro {
+      padding: 56px 56px 48px;
+      text-align: center;
+    }
+
+    .intro-month {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 20px;
+    }
+
+    .intro-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: #18120D;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    .intro-title em { font-style: italic; font-weight: 400; }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: center;
+      margin: 0 auto 22px;
+    }
+
+    .ornament-line {
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background-color: #D9CEC1;
+    }
+
+    .ornament-diamond {
+      width: 5px;
+      height: 5px;
+      background-color: #B89468;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    .intro-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: #5A4A3A;
+      line-height: 1.85;
+      font-style: italic;
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-header {
+      padding: 48px 56px 0;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #18120D;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+    }
+
+    .section-title em { font-style: italic; }
+
+    /* ─── MOTHERS DAY HERO ─── */
+    .mothers-hero {
+      margin: 36px 0 0;
+    }
+
+    .mothers-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ─── DATE BADGE ─── */
+    .date-badge {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #B89468;
+      border: 1px solid #D9CEC1;
+      padding: 6px 16px;
+      margin-bottom: 18px;
+    }
+
+    /* ─── EVENT CARD: Brunch ─── */
+    .event-card {
+      padding: 40px 56px;
+    }
+
+    .event-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #18120D;
+      margin-bottom: 14px;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+    }
+
+    .event-card-title em { font-style: italic; }
+
+    .event-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: #5A4A3A;
+      line-height: 1.85;
+    }
+
+    .event-copy em { font-style: italic; color: #4A3F37; }
+
+    .highlight-detail {
+      margin-top: 22px;
+      padding: 20px 22px;
+      background-color: #FAF7F3;
+      border-left: 2px solid #B89468;
+    }
+
+    .highlight-detail p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #5A4A3A;
+      line-height: 1.75;
+    }
+
+    .highlight-detail strong {
+      font-style: normal;
+      font-weight: 500;
+      color: #18120D;
+    }
+
+    /* ─── SPLIT IMAGE ─── */
+    .split-image {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .split-image > a,
+    .split-image > img {
+      flex: 1 1 50%;
+      width: 50%;
+      display: block;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .split-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    /* ─── DIVIDER ─── */
+    .section-divider {
+      margin: 0 56px;
+      height: 1px;
+      background-color: #EAE0D5;
+    }
+
+    /* ─── DINNER EVENT CARD ─── */
+    .dinner-image-full {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ─── IMAGE BREAK with overlay ─── */
+    .image-break {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-break img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.6);
+    }
+
+    .image-break-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 56px;
+    }
+
+    .image-break-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #C9A97A;
+      margin-bottom: 14px;
+    }
+
+    .image-break-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: #FDFAF6;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .image-break-title em { font-style: italic; }
+
+    .image-break-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: #D9CEC1;
+      line-height: 1.7;
+    }
+
+    /* ─── CHAMPAGNE PAIRING EVENT ─── */
+    .champagne-section {
+      background-color: #3D0C1F;
+      padding: 52px 56px;
+      text-align: center;
+    }
+
+    .champagne-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 16px;
+    }
+
+    .champagne-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #FDFAF6;
+      line-height: 1.25;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .champagne-title em { font-style: italic; font-weight: 400; }
+
+    .champagne-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #C9A97A;
+      margin-bottom: 32px;
+    }
+
+    .champagne-meta {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      border: 1px solid rgba(185,148,104,0.35);
+      margin-bottom: 36px;
+      overflow: hidden;
+    }
+
+    .champagne-meta-item {
+      flex: 1;
+      padding: 16px 20px;
+      border-right: 1px solid rgba(185,148,104,0.35);
+      text-align: center;
+    }
+
+    .champagne-meta-item:last-child { border-right: none; }
+
+    .champagne-meta-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #8C7C6E;
+      margin-bottom: 5px;
+    }
+
+    .champagne-meta-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: #FDFAF6;
+      font-weight: 400;
+    }
+
+    /* ─── MENU COURSES ─── */
+    .menu-grid {
+      margin-bottom: 30px;
+    }
+
+    .menu-course {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(234,224,213,0.15);
+      text-align: left;
+    }
+
+    .menu-course:last-child { border-bottom: none; }
+
+    .menu-course-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-style: italic;
+      color: #B89468;
+      min-width: 22px;
+      margin-top: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    .menu-course-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #FDFAF6;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .menu-course-detail {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: #8C7C6E;
+      line-height: 1.5;
+    }
+
+    .champagne-cta {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #FDFAF6;
+      border: 1px solid rgba(185,148,104,0.6);
+      padding: 14px 36px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+
+    .champagne-cta:hover {
+      background: rgba(185,148,104,0.15);
+    }
+
+    /* ─── WINE PAIRING JUNE ─── */
+    .wine-pairing-section {
+      padding: 52px 56px;
+      background-color: #FAF7F3;
+    }
+
+    .wine-pairing-inner {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .wine-pairing-image-wrap {
+      flex-shrink: 0;
+      width: 200px;
+      overflow: hidden;
+    }
+
+    .wine-pairing-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .wine-pairing-content {
+      flex: 1;
+    }
+
+    .wine-pairing-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7.5px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 10px;
+    }
+
+    .wine-pairing-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #18120D;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    .wine-pairing-title em { font-style: italic; }
+
+    .wine-pairing-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: #5A4A3A;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .wine-pairing-copy em { font-style: italic; }
+
+    .wine-pairing-detail {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #8C7C6E;
+      margin-bottom: 18px;
+      line-height: 1.9;
+    }
+
+    .btn-outline-dark {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8.5px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #18120D;
+      border: 1px solid #18120D;
+      padding: 11px 26px;
+      text-decoration: none;
+    }
+
+    /* ─── FEATURE BLOCKS (Apéro, Martini, Brunch, Dinner) ─── */
+    .feature-block {
+      padding: 0;
+      background-color: #FFFFFF;
+    }
+
+    .feature-block.alt { background-color: #FAF7F3; }
+
+    .feature-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .feature-body {
+      padding: 40px 56px 44px;
+      text-align: left;
+    }
+
+    .feature-body.centered { text-align: center; }
+
+    .feature-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 12px;
+    }
+
+    .feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #18120D;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .feature-title em { font-style: italic; font-weight: 400; }
+
+    .feature-meta {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: #7A6A5E;
+      margin-bottom: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    .feature-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: #5A4A3A;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .feature-copy em { font-style: italic; color: #4A3F37; }
+
+    .feature-list {
+      list-style: none;
+      padding: 18px 22px;
+      background-color: #FAF7F3;
+      border-left: 2px solid #B89468;
+      margin-bottom: 18px;
+    }
+
+    .feature-block.alt .feature-list {
+      background-color: #FFFFFF;
+    }
+
+    .feature-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: #4A3F37;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+    }
+
+    .feature-list li::before {
+      content: '·';
+      color: #B89468;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .feature-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: #7A6A5E;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .offer-tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #FDFAF6;
+      background-color: #B89468;
+      padding: 5px 12px;
+      margin-bottom: 14px;
+    }
+
+    /* ─── EVERGREEN SECTION ─── */
+    .evergreen-section {
+      padding: 52px 56px 40px;
+    }
+
+    .evergreen-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .evergreen-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .evergreen-card {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid #EAE0D5;
+      padding: 28px 0;
+      align-items: center;
+    }
+
+    .evergreen-card:last-child {
+      border-bottom: 1px solid #EAE0D5;
+    }
+
+    .evergreen-card-image {
+      flex-shrink: 0;
+      width: 120px;
+      height: 90px;
+      overflow: hidden;
+    }
+
+    .evergreen-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .evergreen-card-body {
+      flex: 1;
+      padding-left: 24px;
+    }
+
+    .evergreen-card-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7.5px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #B89468;
+      margin-bottom: 6px;
+    }
+
+    .evergreen-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #18120D;
+      line-height: 1.25;
+      margin-bottom: 7px;
+    }
+
+    .evergreen-card-title em { font-style: italic; }
+
+    .evergreen-card-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13.5px;
+      font-style: italic;
+      color: #7A6A5E;
+      line-height: 1.65;
+    }
+
+    /* ─── PRIVATE EVENTS ─── */
+    .private-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .private-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.55);
+    }
+
+    .private-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 56px;
+    }
+
+    .private-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #C9A97A;
+      margin-bottom: 16px;
+    }
+
+    .private-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: #FDFAF6;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .private-title em { font-style: italic; }
+
+    .private-copy {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #D9CEC1;
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 380px;
+    }
+
+    .btn-cream {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8.5px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #18120D;
+      background-color: #FDFAF6;
+      padding: 13px 32px;
+      text-decoration: none;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background-color: #18120D;
+      padding: 48px 56px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #FDFAF6;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-style: italic;
+      color: #8C7C6E;
+      margin-bottom: 28px;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background-color: rgba(234,224,213,0.15);
+      margin: 0 0 24px;
+    }
+
+    .footer-links {
+      margin-bottom: 22px;
+    }
+
+    .footer-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8C7C6E;
+      text-decoration: none;
+      margin: 0 14px;
+    }
+
+    .footer-address {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #5A4A3A;
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-unsub {
+      margin-top: 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8.5px;
+      color: #5A4A3A;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-unsub a {
+      color: #7A6A5E;
+      text-decoration: underline;
+    }
+
+    /* ─── Responsive ─── */
+    @media only screen and (max-width: 640px) {
+      .wrapper { width: 100% !important; }
+      .intro, .event-card, .champagne-section, .wine-pairing-section, .evergreen-section, .footer, .feature-body { padding-left: 28px !important; padding-right: 28px !important; }
+      .section-header { padding-left: 28px !important; padding-right: 28px !important; }
+      .section-divider { margin: 0 28px !important; }
+      .hero-text { padding: 24px 28px 32px !important; }
+      .hero-title { font-size: 30px !important; }
+      .champagne-title { font-size: 26px !important; }
+      .champagne-meta { flex-direction: column !important; }
+      .champagne-meta-item { border-right: none !important; border-bottom: 1px solid rgba(185,148,104,0.25) !important; }
+      .champagne-meta-item:last-child { border-bottom: none !important; }
+      .wine-pairing-inner { flex-direction: column !important; }
+      .wine-pairing-image-wrap { width: 100% !important; height: 200px !important; overflow: hidden; }
+      .wine-pairing-image-wrap img { width: 100% !important; height: 100%; object-fit: cover; }
+      .wine-pairing-content { padding-left: 0 !important; margin-top: 20px; }
+      .private-overlay { padding: 28px !important; }
+      .private-title { font-size: 26px !important; }
+    }
+  a{pointer-events:none !important;cursor:default !important;}</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- ─── HEADER ─── -->
+  <div class="header">
+    <div class="header-eyebrow">Newsletter &nbsp;·&nbsp; May 2026</div>
+    <div class="header-logo">Le Petit Village</div>
+    <div class="header-tagline">A gathering place for the finer things</div>
+  </div>
+
+  <!-- ─── HERO IMAGE ─── -->
+  <div class="hero">
+    <a href="https://www.lepetitvillagenyc.com/" target="_blank" rel="noopener">
+      <img src="https://i.imgur.com/5kVDBfF.gif" alt="Le Petit Village — May 2026" />
+    </a>
+  </div>
+  <div class="hero-text" style="text-align:center;">
+    <div class="hero-label">May 2026 &nbsp;·&nbsp; Le Petit Village</div>
+    <div class="hero-title" style="margin-bottom:14px;">The Season of<br /><em>Gathering</em></div>
+    <div class="hero-sub" style="font-size:17px;color:#18120D;font-style:normal;font-weight:400;margin-bottom:10px;letter-spacing:0.04em;">Mother's Day · Champagne Pairing Dinner · L'Apéro & More</div>
+    <div class="hero-sub">This May, we invite you to slow down, celebrate the people who matter most,<br />and savour the season — one course, one glass, one memory at a time.</div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- MOTHER'S DAY -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <div class="section-header">
+    <div class="section-eyebrow">May 10, 2026</div>
+    <div class="section-title">Mother's Day<br /><em>at Le Petit Village</em></div>
+  </div>
+
+  <!-- Creative choice: Fft6r0Y + I6l8rZn — the warm split brunch images evoke light, softness,
+       and the gentle luxury of a weekend morning. Perfect for the Mother's Day narrative. -->
+  <div class="mothers-hero" style="margin-top: 36px;">
+    <div class="split-image">
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-10&seats=2" target="_blank" rel="noopener"><img src="https://i.imgur.com/Fft6r0Y.jpeg" alt="Mother's Day Brunch at LPV" /></a>
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-10&seats=2" target="_blank" rel="noopener"><img src="https://i.imgur.com/uey4obv.jpeg" alt="Brunch Table" /></a>
+    </div>
+  </div>
+
+  <!-- BRUNCH -->
+  <div class="event-card">
+    <div class="date-badge">Brunch &nbsp;·&nbsp; May 10</div>
+    <div class="event-card-title">A Thoughtful <em>Morning Gesture</em></div>
+    <p class="event-copy">
+      Brunch on Mother's Day is more than a meal — it is a moment. Every mother joining us this morning will be greeted with a <em>beautiful fresh flower</em> and a complimentary heart-shaped cookie, crafted by our Chef, with "MOM" written in delicate icing.
+      <br /><br />
+      A small touch. A lasting impression.
+    </p>
+    <div class="highlight-detail">
+      <p><strong>A gift from our kitchen to yours —</strong><br />
+      A hand-crafted heart cookie with "MOM," made with love by our Pastry Chef, paired with a fresh flower, presented to every mother at the table.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- DINNER -->
+  <!-- Creative choice: T9C8vdD.jpeg — the candlelit dinner image carries warmth and reverence.
+       Positioned here, it elevates the Mother's Day dinner to something truly special. -->
+  <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-10&seats=2" target="_blank" rel="noopener"><img class="dinner-image-full" src="https://i.imgur.com/BEkWBCL.jpeg" alt="Mother's Day Dinner at Le Petit Village" /></a>
+
+  <div class="event-card">
+    <div class="date-badge">Dinner &nbsp;·&nbsp; May 10</div>
+    <div class="event-card-title">An Evening to <em>Honor You</em></div>
+    <p class="event-copy">
+      This Mother's Day, we celebrate all women who are mothers, aunts, daughters, or simply cherished as one.
+      <br /><br />
+      Join us for dinner and receive a <em>complimentary glass of wine or sparkling wine</em> — a quiet gesture to acknowledge the people who make every moment meaningful.
+    </p>
+    <div class="highlight-detail">
+      <p><strong>For every mother at the table —</strong><br />
+      A complimentary glass of wine or sparkling wine, offered with warmth and gratitude from the entire Le Petit Village team.</p>
+    </div>
+  </div>
+
+  <div style="padding: 8px 56px 40px; text-align: center;">
+    <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-10&seats=2" target="_blank" rel="noopener" class="btn-outline-dark">Reserve Your Table</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SPARKLING EVENINGS — HEADER TEXT + IMAGE -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <div style="padding: 52px 56px 32px; text-align: center; background-color: #FFFFFF;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:0.38em;text-transform:uppercase;color:#B89468;margin-bottom:14px;">Sparkling Evenings</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#18120D;letter-spacing:0.04em;line-height:1.25;margin-bottom:12px;"><em>An Exceptional Evening</em></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:#7A6A5E;line-height:1.75;">A family-style dinner for Champagne lovers and the curious alike —<br />three cuvées, three expressions, one unforgettable night.</div>
+  </div>
+
+  <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village/events/sparkling-evenings-a-champagne-epc-pairing-dinner-2026-05-20?seats=1" target="_blank" rel="noopener"><img src="https://i.imgur.com/HY0BxPM.jpeg" alt="Sparkling Evenings — Champagne EPC Pairing Dinner" style="width:100%;height:auto;display:block;" /></a>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CHAMPAGNE EPC PAIRING DINNER -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <div class="champagne-section">
+
+    <div class="champagne-eyebrow">May 20, 2026 &nbsp;·&nbsp; 6:00 PM</div>
+    <div class="champagne-title"><em>Sparkling Evenings:</em><br />A Champagne EPC Pairing Dinner</div>
+    <div class="champagne-subtitle">Three cuvées. A family-style feast. A toast with Erwan.</div>
+
+    <div class="champagne-meta">
+      <div class="champagne-meta-item">
+        <div class="champagne-meta-label">Date</div>
+        <div class="champagne-meta-value">May 20, 2026</div>
+      </div>
+      <div class="champagne-meta-item">
+        <div class="champagne-meta-label">Time</div>
+        <div class="champagne-meta-value">6:00 PM</div>
+      </div>
+      <div class="champagne-meta-item">
+        <div class="champagne-meta-label">Format</div>
+        <div class="champagne-meta-value">Family-Style</div>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-course">
+        <div class="menu-course-num">I.</div>
+        <div>
+          <div class="menu-course-name">Welcome &amp; First Course</div>
+          <div class="menu-course-detail">Welcome drink — choice of EPC Blanc de Blancs or a Flora Spritz (bubbly with begonia-infused UNA vodka and edible flowers). Followed by family-style starters: Salad du Jardin, Oysters Moscovite topped with New York Champagne Week caviar, and seafood tower offerings.</div>
+          <div style="margin-top:6px;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:#B89468;">Pairing &nbsp;·&nbsp; EPC Blanc de Blancs</div>
+        </div>
+      </div>
+
+      <div class="menu-course">
+        <div class="menu-course-num">·</div>
+        <div>
+          <div class="menu-course-name">A Toast with Erwan</div>
+          <div class="menu-course-detail">Erwan presents the Champagnes and leads a toast following the starters — a personal moment at the heart of the evening.</div>
+          <div style="margin-top:6px;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:#B89468;">Presentation</div>
+        </div>
+      </div>
+
+      <div class="menu-course">
+        <div class="menu-course-num">II.</div>
+        <div>
+          <div class="menu-course-name">Entrée — Your Choice</div>
+          <div class="menu-course-detail">Moules marinières · Branzino · Poached halibut.<br />With family-style frites, wild mushrooms, and roasted Brussels sprouts.</div>
+          <div style="margin-top:6px;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:#B89468;">Pairing &nbsp;·&nbsp; EPC Blanc de Blancs Brut Nature</div>
+        </div>
+      </div>
+
+      <div class="menu-course">
+        <div class="menu-course-num">III.</div>
+        <div>
+          <div class="menu-course-name">Dessert</div>
+          <div class="menu-course-detail">A seasonal sweet to close the evening.</div>
+          <div style="margin-top:6px;font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:#B89468;">Pairing &nbsp;·&nbsp; EPC Rosé</div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village/events/sparkling-evenings-a-champagne-epc-pairing-dinner-2026-05-20?seats=1" target="_blank" rel="noopener" class="champagne-cta">Secure Your Seat</a>
+
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- EVERGREEN SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <div style="padding: 60px 56px 0; text-align: center; background-color: #FFFFFF;">
+    <div class="section-eyebrow">Always at LPV</div>
+    <div class="section-title">The <em>Full Experience</em></div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:#7A6A5E;line-height:1.75;margin-top:14px;max-width:440px;margin-left:auto;margin-right:auto;">Small rituals, worth returning to — every week, every weekend, every evening.</div>
+  </div>
+
+  <!-- L'APÉRO -->
+  <div class="feature-block" style="margin-top: 40px;">
+    <img class="feature-image" src="https://i.imgur.com/wE5rN1P.png" alt="Experience L'Apéro at Le Petit Village" />
+    <div class="feature-body">
+      <div class="feature-eyebrow">Weekdays &nbsp;·&nbsp; 5PM – 6PM</div>
+      <div class="feature-title">Experience <em>L'Apéro</em></div>
+      <div class="feature-meta">Where taste meets elegance</div>
+      <p class="feature-copy">Weekdays from 4–6PM, join us for craft cocktails, thoughtful wines, and bites designed for lingering.</p>
+      <ul class="feature-list">
+        <li>$14 Signature Cocktails</li>
+        <li>$9 Wines by the Glass</li>
+        <li>$6 Beers</li>
+      </ul>
+      <p class="feature-note">No reservations needed — just arrive hungry and a little thirsty.</p>
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-03&seats=1" target="_blank" rel="noopener" class="btn-outline-dark">Join Us at the Bar</a>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- MARTINI WEDNESDAY -->
+  <div class="feature-block alt">
+    <img class="feature-image" src="https://i.imgur.com/gFxJV9C.png" alt="Martini Wednesday at Le Petit Village" />
+    <div class="feature-body">
+      <span class="offer-tag">New Offer</span>
+      <div class="feature-eyebrow">Wednesdays &nbsp;·&nbsp; At the Bar</div>
+      <div class="feature-title"><em>Martini</em> Wednesday</div>
+      <div class="feature-meta">A midweek gift, on us</div>
+      <p class="feature-copy">Stop by the bar on Wednesday and your first <em>martini is on us</em> — a small ritual to carry you through the week. Bar seating only.</p>
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-03&seats=1" target="_blank" rel="noopener" class="btn-outline-dark">Walk In Wednesday</a>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- BRUNCH TASTING -->
+  <div class="feature-block">
+    <img class="feature-image" src="https://i.imgur.com/Fft6r0Y.jpeg" alt="LPV Brunch Tasting" />
+    <div class="feature-body">
+      <div class="feature-eyebrow">Every Weekend &nbsp;·&nbsp; Endless Spring Sips</div>
+      <div class="feature-title">LPV <em>Brunch Tasting</em></div>
+      <div class="feature-meta">Curious to try it all? This is your excuse.</div>
+      <p class="feature-copy">Our Brunch Tasting Menu lets you savour every favourite — in perfect half-portions — designed for sharing (or not).</p>
+      <ul class="feature-list">
+        <li>Avocado Toast</li>
+        <li>Smoked Salmon Tartine</li>
+        <li>Ratatouille Shakshuka</li>
+        <li>Brioche French Toast</li>
+      </ul>
+      <p class="feature-note">Perfect for sharing — or not sharing at all.</p>
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-03&seats=1" target="_blank" rel="noopener" class="btn-outline-dark">Reserve Brunch</a>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- DINNER AT LPV -->
+  <div class="feature-block alt">
+    <img class="feature-image" src="https://i.imgur.com/IigtVVe.jpeg" alt="Dinner at Le Petit Village" />
+    <div class="feature-body">
+      <div class="feature-eyebrow">Tuesday – Sunday &nbsp;·&nbsp; Evenings</div>
+      <div class="feature-title"><em>Dinner</em> at LPV</div>
+      <div class="feature-meta">An evening worth lingering over</div>
+      <p class="feature-copy">Candlelight, seasonal plates, and a wine list curated with care. Dinner at Le Petit Village is the kind of evening you plan your week around — <em>simple, considered, unhurried.</em></p>
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village?date=2026-05-03&seats=1" target="_blank" rel="noopener" class="btn-outline-dark">Book Your Evening</a>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PRIVATE EVENTS CLOSING IMAGE -->
+  <!-- Creative choice: ExvetcF.jpeg — the established private events image closes the
+       newsletter with gravitas and aspiration. Used consistently across emails as a
+       signature closer for the LPV brand. -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <a href="https://www.lepetitvillagenyc.com/private-events" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">
+    <div class="private-section">
+      <img src="https://i.imgur.com/ExvetcF.jpeg" alt="Private Events at Le Petit Village" />
+      <div class="private-overlay">
+        <div class="private-eyebrow">Private Events</div>
+        <div class="private-title">Your <em>Celebration,</em><br />Our Stage</div>
+        <p class="private-copy">From intimate dinners to milestone gatherings — we create the setting, you create the memories.</p>
+        <span class="btn-cream">Enquire About Private Events</span>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- ─── FOOTER ─── -->
+  <div class="footer">
+    <div class="footer-logo">Le Petit Village</div>
+    <div class="footer-tagline">A gathering place for the finer things</div>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" target="_blank" rel="noopener">Reserve</a>
+      <a href="https://www.lepetitvillagenyc.com/menus" target="_blank" rel="noopener">Menu</a>
+      <a href="https://www.lepetitvillagenyc.com/private-events" target="_blank" rel="noopener">Events</a>
+      <a href="https://www.lepetitvillagenyc.com/private-events" target="_blank" rel="noopener">Private Dining</a>
+    </div>
+    <div class="footer-address">
+      173 7th Ave S, New York, NY 10014<br />
+      <a href="https://www.lepetitvillagenyc.com/" target="_blank" rel="noopener" style="color:#7A6A5E;text-decoration:none;">lepetitvillagenyc.com</a>
+    </div>
+    <div class="footer-unsub">
+      You are receiving this because you opted in at our restaurant.<br />
+      <a href="#">Unsubscribe</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

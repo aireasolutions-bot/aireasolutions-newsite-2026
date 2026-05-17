@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>February at Le Petit Village</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #F5F1EB;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .email-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+        }
+
+        /* ── Header ── */
+        .header {
+            background-color: #4A1525;
+            padding: 32px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: #FAF7F2;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-content {
+            background-color: #4A1525;
+            padding: 44px 40px 52px;
+            text-align: center;
+        }
+
+        .hero-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #D4AF37;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 300;
+            font-style: italic;
+            color: #FAF7F2;
+            line-height: 1.12;
+            margin: 0 0 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.9;
+            color: #D4C4B0;
+            max-width: 460px;
+            margin: 0 auto 36px;
+        }
+
+        /* ── Buttons ── */
+        .cta-button {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 17px 44px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-dark {
+            background-color: #4A1525;
+            color: #FAF7F2;
+            border: 1.5px solid #4A1525;
+        }
+
+        .cta-dark:hover {
+            background-color: #5E1C31;
+            border-color: #5E1C31;
+        }
+
+        .cta-outline-light {
+            background-color: transparent;
+            border: 1.5px solid rgba(212, 196, 176, 0.6);
+            color: #FAF7F2;
+        }
+
+        .cta-outline-light:hover {
+            background-color: #FAF7F2;
+            color: #1a1611;
+            border-color: #FAF7F2;
+        }
+
+        .cta-outline-dark {
+            background-color: transparent;
+            border: 1.5px solid #4A1525;
+            color: #4A1525;
+        }
+
+        .cta-outline-dark:hover {
+            background-color: #4A1525;
+            color: #FAF7F2;
+        }
+
+        .cta-rose {
+            background-color: #B5584F;
+            color: #FFFFFF;
+            border: 1.5px solid #B5584F;
+        }
+
+        .cta-rose:hover {
+            background-color: #9E4A42;
+            border-color: #9E4A42;
+        }
+
+        .cta-gold-outline {
+            background-color: transparent;
+            border: 1.5px solid #D4AF37;
+            color: #D4AF37;
+        }
+
+        .cta-gold-outline:hover {
+            background-color: #D4AF37;
+            color: #1a1611;
+        }
+
+        .cta-outline-white {
+            background-color: transparent;
+            border: 1.5px solid rgba(250, 247, 242, 0.45);
+            color: #FAF7F2;
+        }
+
+        .cta-outline-white:hover {
+            background-color: #FAF7F2;
+            color: #1a1611;
+            border-color: #FAF7F2;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: 64px 40px;
+            text-align: center;
+        }
+
+        .section-white { background-color: #FFFFFF; }
+        .section-cream { background-color: #FAF7F2; }
+        .section-blush { background-color: #FDF7F5; }
+        .section-dark { background-color: #4A1525; }
+
+        .section-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13px;
+            font-weight: 300;
+            color: #D4C4B0;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #8B7355;
+            margin-bottom: 12px;
+        }
+
+        .section-label-gold { color: #D4AF37; }
+        .section-label-rose { color: #B5584F; }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 500;
+            color: #1a1611;
+            margin: 0 0 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title-light { color: #FAF7F2; }
+
+        .section-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            color: #6B5D4F;
+            margin: 0 0 8px;
+        }
+
+        .section-subtitle-light { color: #D4C4B0; }
+
+        .section-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: #8B7355;
+            letter-spacing: 0.5px;
+            margin: 14px 0 28px;
+        }
+
+        .section-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.85;
+            color: #4a4037;
+            max-width: 500px;
+            margin: 0 auto 24px;
+        }
+
+        .section-text strong {
+            font-weight: 500;
+            color: #1a1611;
+        }
+
+        .section-text-light { color: #D4C4B0; }
+
+        /* ── Dividers ── */
+        .divider {
+            width: 80px;
+            height: 1px;
+            background-color: #D4C4B0;
+            margin: 0 auto 28px;
+        }
+
+        .divider-gold { background-color: #D4AF37; }
+        .divider-rose { background-color: #C2837C; }
+
+        .ornament {
+            text-align: center;
+            margin: 0 auto 24px;
+            color: #D4C4B0;
+            font-size: 18px;
+            letter-spacing: 12px;
+        }
+
+        .ornament-gold { color: #D4AF37; }
+
+        /* ── Feature List ── */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px auto;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .feature-list li {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: #4a4037;
+            line-height: 1.7;
+            padding: 6px 0 6px 24px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '\25C6';
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-size: 7px;
+            top: 11px;
+        }
+
+        .feature-list-light li { color: #D4C4B0; }
+        .feature-list-light li::before { color: #D4AF37; }
+
+        /* ── Highlight Box ── */
+        .highlight-box {
+            background-color: #FFFBF5;
+            border-left: 3px solid #D4AF37;
+            padding: 24px 28px;
+            margin: 28px auto;
+            max-width: 460px;
+            text-align: left;
+        }
+
+        .highlight-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #4a4037;
+            margin: 0;
+        }
+
+        /* ── Inline Image ── */
+        .inline-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+            margin: 32px 0;
+        }
+
+        /* ── Anniversary Card ── */
+        .anniversary-card {
+            border: 1px solid #D4AF37;
+            padding: 52px 40px 48px;
+            max-width: 520px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .anniversary-card::before {
+            content: '\269C';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FAF7F2;
+            padding: 0 16px;
+            color: #D4AF37;
+            font-size: 20px;
+        }
+
+        /* ── Valentine's Menu Card ── */
+        .menu-card {
+            background: #FFFFFF;
+            border: 1px solid #D4C4B0;
+            padding: 52px 36px 44px;
+            max-width: 480px;
+            margin: 36px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu-card::before {
+            content: '\269C';
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FDF7F5;
+            padding: 0 14px;
+            color: #C2837C;
+            font-size: 18px;
+        }
+
+        .menu-card-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #B5584F;
+            margin: 0 0 8px;
+        }
+
+        .menu-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: #1a1611;
+            margin: 0 0 36px;
+        }
+
+        .menu-course {
+            margin: 0 0 8px;
+        }
+
+        .menu-course-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8B7355;
+            margin: 0 0 4px;
+        }
+
+        .menu-course-note {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            font-style: italic;
+            color: #8B7355;
+            margin: 0 0 20px;
+        }
+
+        .menu-dish {
+            margin: 0 0 14px;
+        }
+
+        .menu-dish-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 500;
+            font-style: italic;
+            color: #1a1611;
+            margin: 0 0 2px;
+        }
+
+        .menu-dish-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            color: #8B7355;
+            letter-spacing: 0.3px;
+            margin: 0;
+        }
+
+        .menu-separator {
+            width: 60px;
+            height: 1px;
+            background-color: #D4C4B0;
+            margin: 28px auto;
+            position: relative;
+        }
+
+        .menu-separator::after {
+            content: '\25C6';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFFFFF;
+            padding: 0 10px;
+            color: #D4C4B0;
+            font-size: 7px;
+        }
+
+        /* ── Price Badge ── */
+        .price-badge {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #4A1525;
+            border: 1px solid #4A1525;
+            padding: 10px 28px;
+            margin: 20px 0 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Small Note ── */
+        .small-note {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            font-style: italic;
+            color: #8B7355;
+            margin: 14px 0 0;
+        }
+
+        /* ── Image Break ── */
+        .image-break {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-break img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-break-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(74,21,37,0.68);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* ── 2-Column Grid ── */
+        .grid-2 {
+            display: table;
+            width: 100%;
+            margin: 32px 0 0;
+        }
+
+        .grid-2-cell {
+            display: table-cell;
+            width: 50%;
+            padding: 4px;
+        }
+
+        .grid-2-cell img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            border-radius: 3px;
+        }
+
+        /* ── Brunch Grid ── */
+        .brunch-grid {
+            display: table;
+            width: 100%;
+            max-width: 460px;
+            margin: 28px auto;
+        }
+
+        .brunch-grid-row {
+            display: table-row;
+        }
+
+        .brunch-grid-cell {
+            display: table-cell;
+            width: 50%;
+            padding: 14px 12px;
+            text-align: center;
+            vertical-align: top;
+            border-bottom: 1px solid #E8DFD4;
+        }
+
+        .brunch-grid-row:last-child .brunch-grid-cell {
+            border-bottom: none;
+        }
+
+        .brunch-item-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 500;
+            font-style: italic;
+            color: #1a1611;
+            margin: 0;
+        }
+
+        /* ── Closing ── */
+        .closing-section {
+            padding: 64px 40px;
+            text-align: center;
+            background-color: #FAF7F2;
+        }
+
+        .closing-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 300;
+            font-style: italic;
+            color: #4a4037;
+            max-width: 440px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 22px;
+            font-weight: 300;
+            color: #6B5D4F;
+            margin: 40px 0 8px;
+        }
+
+        .signature-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 26px;
+            color: #1a1611;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background-color: #4A1525;
+            color: #D4C4B0;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FAF7F2;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            margin: 28px 0;
+        }
+
+        .footer-link {
+            color: #D4C4B0;
+            text-decoration: none;
+            margin: 0 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-link:hover {
+            color: #FAF7F2;
+        }
+
+        /* ── Responsive ── */
+        @media only screen and (max-width: 600px) {
+            .header { padding: 24px 20px; }
+            .logo { font-size: 28px; }
+            .hero-content { padding: 36px 20px 40px; }
+            .hero-title { font-size: 40px; }
+            .hero-tagline { font-size: 13px; }
+            .section { padding: 48px 20px; }
+            .section-title { font-size: 28px; }
+            .section-subtitle { font-size: 19px; }
+            .anniversary-card { padding: 40px 24px 36px; }
+            .menu-card { padding: 40px 20px 36px; }
+            .menu-card-title { font-size: 24px; }
+            .menu-dish-name { font-size: 18px; }
+            .image-break img { height: 320px; }
+            .image-break-overlay { padding: 28px 20px; }
+            .grid-2-cell {
+                display: block;
+                width: 100%;
+                padding: 4px 0;
+            }
+            .grid-2-cell img { height: 280px; }
+            .brunch-grid-cell {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .cta-button { padding: 15px 36px; font-size: 11px; }
+            .closing-text { font-size: 22px; }
+            .footer { padding: 36px 20px; }
+            .footer-link { display: block; margin: 12px 0; }
+        }
+    a{pointer-events:none !important;cursor:default !important;}</style>
+</head>
+<body>
+    <div class="email-container">
+
+        <!-- ═══════════ HEADER ═══════════ -->
+        <div class="header">
+            <h1 class="logo">Le Petit Village</h1>
+        </div>
+
+        <!-- ═══════════ HERO ═══════════ -->
+        <div class="hero">
+            <img src="https://i.imgur.com/p6E3Ew5.gif" alt="February at Le Petit Village" class="hero-image">
+            <div class="hero-content">
+                <div class="hero-label">February 2026</div>
+                <h2 class="hero-title">A Month of<br>French Moments</h2>
+                <p class="hero-tagline">
+                    Candlelight, seasonal flavors, and long conversations. February is your invitation to slow down and savor every detail.
+                </p>
+                <a href="#" class="cta-button cta-outline-light">Explore February Experiences</a>
+            </div>
+        </div>
+
+        <!-- ═══════════ SECTION 1: WINE PAIRING ═══════════ -->
+        <div class="section section-white">
+            <div class="section-number">01</div>
+            <div class="section-label">LPV Experiences</div>
+            <h3 class="section-title">Five-Course Wine Pairing Dinner</h3>
+            <p class="section-subtitle">An Intimate Midweek Experience</p>
+            <p class="section-date">Wednesday, March 4, 2026 &nbsp;&bull;&nbsp; 6:30 PM</p>
+            <div class="price-badge">$149 per ticket + tax</div>
+
+            <div class="divider divider-gold" style="margin-top: 28px;"></div>
+
+            <p class="section-text">
+                Join us for a one-night-only five-course wine pairing dinner, thoughtfully designed to highlight winter's most refined flavors. Hosted by Josh Lepor&eacute;, this guided evening pairs chef-driven seasonal dishes with exceptional wines—each course unfolding with intention, warmth, and story.
+            </p>
+
+            <ul class="feature-list">
+                <li>A candlelit setting</li>
+                <li>Thoughtfully curated wine pairings</li>
+                <li>A guided exploration of flavor</li>
+                <li>A relaxed, elegant midweek escape</li>
+            </ul>
+
+            <img src="https://i.imgur.com/hEJlAf3.jpeg" alt="Wine Pairing Dinner" class="inline-image">
+
+            <div class="highlight-box">
+                <p class="highlight-text">
+                    Perfect for wine lovers, couples, and anyone who believes dinner should linger.
+                </p>
+            </div>
+
+            <a href="#" class="cta-button cta-dark">Reserve Your Seat</a>
+            <p class="small-note">Limited seating available</p>
+
+            <div class="grid-2" style="margin-top: 28px;">
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/TsZ2zXN.png" alt="Wine Pairing Experience">
+                </div>
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/kgwfDme.jpeg" alt="Wine Pairing Dinner">
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════ SECTION 2: ANNIVERSARY ═══════════ -->
+        <div style="background-color: #FAF7F2;">
+            <img src="https://i.imgur.com/4VKjfOm.jpeg" alt="Le Petit Village Anniversary" style="width: 100%; display: block; object-fit: contain;">
+        </div>
+        <div class="section section-cream">
+            <div class="section-number">02</div>
+            <div class="section-label section-label-gold">A Celebration</div>
+
+            <div class="anniversary-card">
+                <h3 class="section-title">Le Petit Village Turns One</h3>
+                <p class="section-subtitle">An Anniversary Soir&eacute;e</p>
+                <p class="section-date">Monday, February 16, 2026 &nbsp;&bull;&nbsp; 6:00 PM<br>Greenwich Village</p>
+
+                <div class="divider divider-gold"></div>
+
+                <p class="section-text" style="max-width: 440px;">
+                    One year ago, Le Petit Village opened its doors with a simple vision: French-inspired dining, genuine hospitality, and a sense of community. Now, we invite you to celebrate with us.
+                </p>
+
+                <ul class="feature-list" style="max-width: 360px;">
+                    <li>Complimentary cocktails</li>
+                    <li>Hors d'oeuvres &amp; chef-curated small bites</li>
+                    <li>A celebratory French-inspired atmosphere</li>
+                    <li>A toast to one year of memories—and many more to come</li>
+                </ul>
+
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: #6B5D4F; margin: 20px 0 0;">
+                    Effortless, elegant, and unmistakably LPV.
+                </p>
+
+                <div class="price-badge">Complimentary</div>
+                <p class="small-note">Walk-ins welcome &middot; Reservations recommended</p>
+            </div>
+
+            <div style="margin-top: 36px;">
+                <a href="#" class="cta-button cta-dark">Reserve Your Seat</a>
+            </div>
+        </div>
+
+        <!-- ═══════════ SECTION 3: VALENTINE'S DAY ═══════════ -->
+        <div class="section section-blush">
+            <div class="section-number">03</div>
+            <div class="section-label section-label-rose">Romance, the French Way</div>
+            <h3 class="section-title">Valentine's Day at Le Petit Village</h3>
+            <p class="section-subtitle" style="color: #B5584F;">Friday, February 14</p>
+
+            <div class="divider divider-rose"></div>
+
+            <p class="section-text">
+                Celebrate Valentine's Day with a cozy, candlelit dinner featuring our special prix fixe menu, alongside &agrave; la carte favorites.
+            </p>
+
+            <div class="grid-2">
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/X85CLwA.jpeg" alt="Valentine's Day at Le Petit Village">
+                </div>
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/bVODefK.jpeg" alt="Valentine's Dinner">
+                </div>
+            </div>
+
+            <!-- Valentine's Menu Card -->
+            <div class="menu-card">
+                <p class="menu-card-label">Valentine's Prix Fixe</p>
+                <p class="menu-card-title">Le Menu</p>
+
+                <div class="menu-course">
+                    <p class="menu-course-label">&mdash; Appetizer &mdash;</p>
+                    <p class="menu-course-note">choice of one</p>
+
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Lobster Bisque</p>
+                        <p class="menu-dish-desc">lobster &middot; parsnip chips</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Foie Gras</p>
+                        <p class="menu-dish-desc">blackberry gel&eacute;e &middot; pickled blackberries &middot; brioche toast</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Beet Salad</p>
+                        <p class="menu-dish-desc">whipped honey goat cheese &middot; orange &middot; pickled pearl onion</p>
+                    </div>
+                </div>
+
+                <div class="menu-separator"></div>
+
+                <div class="menu-course">
+                    <p class="menu-course-label">&mdash; Entr&eacute;e &mdash;</p>
+                    <p class="menu-course-note">choice of one</p>
+
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Filet Mignon</p>
+                        <p class="menu-dish-desc">confit pearl onion &middot; potato terrine &middot; sauce bordelaise</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Poached Halibut</p>
+                        <p class="menu-dish-desc">olive oil-poached &middot; white asparagus &middot; trout roe &middot; beurre blanc</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Pappardelle</p>
+                        <p class="menu-dish-desc">wild mushroom &amp; celeriac rag&ugrave;</p>
+                    </div>
+                </div>
+
+                <div class="menu-separator"></div>
+
+                <div class="menu-course">
+                    <p class="menu-course-label">&mdash; Dessert &mdash;</p>
+                    <p class="menu-course-note">choice of one</p>
+
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Chocolate Cake</p>
+                        <p class="menu-dish-desc">dark chocolate &middot; vanilla bean &middot; wild berry jam</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Cr&egrave;me Br&ucirc;l&eacute;e</p>
+                    </div>
+                    <div class="menu-dish">
+                        <p class="menu-dish-name">Profiteroles</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: #8B7355; margin: 8px 0 32px;">
+                Romantic, refined, and designed to be savored.
+            </p>
+
+            <a href="#" class="cta-button cta-rose">Reserve Valentine's Dinner</a>
+        </div>
+
+        <!-- ═══════════ SECTION 4: L'APERO ═══════════ -->
+        <div class="section section-white">
+            <div class="section-number">04</div>
+            <div class="section-label">After Work</div>
+            <h3 class="section-title">L'Ap&eacute;ro at LPV</h3>
+            <p class="section-subtitle">French Cocktail Hour</p>
+
+            <div class="divider"></div>
+
+            <p class="section-text">
+                Ease into the evening with our updated L'Ap&eacute;ro menu, available Monday through Friday. Perfect for after-work drinks, casual bites, or the start of a longer night.
+            </p>
+
+            <div class="grid-2">
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/PKfaist.jpeg" alt="Cocktails at LPV">
+                </div>
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/1mB3Bj7.jpeg" alt="Small Plates">
+                </div>
+            </div>
+
+            <ul class="feature-list">
+                <li>Spritzes, cocktails, and wines at ap&eacute;ro pricing</li>
+                <li>Small plates designed for sharing</li>
+                <li>A relaxed, effortlessly French atmosphere</li>
+            </ul>
+
+            <a href="#" class="cta-button cta-outline-dark">View L'Ap&eacute;ro Menu</a>
+        </div>
+
+        <!-- ═══════════ SECTION 5: DINNER (Image Break) ═══════════ -->
+        <div class="image-break">
+            <img src="https://i.imgur.com/J5l8iVZ.png" alt="Dinner at Le Petit Village">
+            <div class="image-break-overlay" style="padding-top: 60px; padding-bottom: 60px;">
+                <div class="section-number" style="color: #D4AF37;">05</div>
+                <div class="section-label section-label-gold" style="margin-bottom: 12px;">Any Night of the Week</div>
+                <h3 class="section-title section-title-light" style="margin-bottom: 12px;">Dinner at Le Petit Village</h3>
+                <p class="section-subtitle section-subtitle-light">Your Neighborhood French Table</p>
+            </div>
+        </div>
+        <div class="section section-white" style="padding-top: 40px; padding-bottom: 52px;">
+            <p class="section-text" style="max-width: 440px; margin-bottom: 32px;">
+                Whether it's a spontaneous date night, a midweek dinner, or a celebration that doesn't need an excuse—seasonal dishes, classic French technique, and warm hospitality make every night feel just right.
+            </p>
+            <a href="#" class="cta-button cta-dark">Book Dinner</a>
+        </div>
+
+        <!-- ═══════════ SECTION 6: BRUNCH TASTING ═══════════ -->
+        <div class="section section-cream">
+            <div class="section-number">06</div>
+            <div class="section-label">Weekends</div>
+            <h3 class="section-title">LPV Brunch Tasting</h3>
+            <p class="section-subtitle">Curious to Try It All?</p>
+
+            <div class="divider divider-gold"></div>
+
+            <p class="section-text">
+                Our Brunch Tasting Menu is the perfect excuse. Enjoy half portions of our most-loved dishes—perfect for sharing, or not sharing at all.
+            </p>
+
+            <div class="brunch-grid">
+                <div class="brunch-grid-row">
+                    <div class="brunch-grid-cell">
+                        <p class="brunch-item-name">Avocado Toast</p>
+                    </div>
+                    <div class="brunch-grid-cell">
+                        <p class="brunch-item-name">Smoked Salmon Tartine</p>
+                    </div>
+                </div>
+                <div class="brunch-grid-row">
+                    <div class="brunch-grid-cell">
+                        <p class="brunch-item-name">Ratatouille Shakshuka</p>
+                    </div>
+                    <div class="brunch-grid-cell">
+                        <p class="brunch-item-name">Brioche French Toast</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/Fft6r0Y.jpeg" alt="Brunch at LPV">
+                </div>
+                <div class="grid-2-cell">
+                    <img src="https://i.imgur.com/I6l8rZn.jpeg" alt="LPV Brunch Tasting">
+                </div>
+            </div>
+
+            <a href="#" class="cta-button cta-dark">Join Us for Brunch</a>
+        </div>
+
+        <!-- ═══════════ SECTION 7: GALENTINE'S ═══════════ -->
+        <div class="section section-white">
+            <div class="section-number">07</div>
+            <div class="section-label">After Valentine's Day</div>
+            <h3 class="section-title">Galentine's, But Make It Brunch</h3>
+            <p class="section-subtitle">Because Love Comes in Many Forms</p>
+
+            <div class="divider"></div>
+
+            <p class="section-text">
+                After Valentine's Day, gather your friends and toast to friendship over brunch. Sip cocktails, share plates, linger longer. Sunday brunch is calling.
+            </p>
+
+            <img src="https://i.imgur.com/B8l4KEG.jpeg" alt="Galentine's Brunch" style="width: 100%; display: block; border-radius: 4px; margin: 32px 0; object-fit: contain;">
+
+            <a href="#" class="cta-button cta-outline-dark">Plan Your Galentine's Brunch</a>
+        </div>
+
+        <!-- ═══════════ SECTION 8: PRIVATE EVENTS ═══════════ -->
+        <div class="section section-dark">
+            <div class="section-number" style="color: #D4AF37;">08</div>
+            <div class="section-label section-label-gold">Celebrations</div>
+            <h3 class="section-title section-title-light">Celebrate at Le Petit Village</h3>
+            <p class="section-subtitle section-subtitle-light">Private Dining &amp; Events</p>
+
+            <div style="width: 80px; height: 1px; background-color: #D4AF37; margin: 28px auto;"></div>
+
+            <p class="section-text section-text-light" style="max-width: 460px;">
+                Birthdays, anniversaries, intimate celebrations, and private gatherings—Le Petit Village offers a charming French setting for moments worth celebrating. Our team will help curate the perfect experience, from menus to ambiance.
+            </p>
+
+            <a href="#" class="cta-button cta-gold-outline">Inquire About Private Events</a>
+        </div>
+
+        <!-- ═══════════ CLOSING ═══════════ -->
+        <div class="closing-section">
+            <div class="ornament ornament-gold">&#9884;</div>
+            <p class="closing-text">
+                February is meant to be savored.
+            </p>
+            <p class="closing-text" style="font-size: 20px; margin-bottom: 36px;">
+                We look forward to welcoming you at Le Petit Village.
+            </p>
+            <a href="#" class="cta-button cta-dark">Reserve Your Table</a>
+            <p class="signature">&Agrave; bient&ocirc;t,</p>
+            <p class="signature-name">Le Petit Village</p>
+        </div>
+
+        <!-- ═══════════ FOOTER ═══════════ -->
+        <div class="footer">
+            <p class="footer-logo">Le Petit Village</p>
+            <p style="font-size: 13px; letter-spacing: 0.5px;">123 Greenwich Village &middot; New York, NY</p>
+            <p style="font-size: 13px; letter-spacing: 0.5px;">(212) 555-0100</p>
+
+            <div class="footer-links">
+                <a href="#" class="footer-link">Website</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 11px;">&copy; 2026 Le Petit Village. All rights reserved.</p>
+            <p style="font-size: 11px; margin-top: 16px;"><a href="#" class="footer-link" style="font-size: 11px;">Unsubscribe</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<system-reminder>A Supabase database is available to use for any data persistence. ALWAYS use it unless explicitly requested otherwise.</system-reminder>
+
+<system-reminder>You are in build mode. You are allowed to modify the codebase.</system-reminder>

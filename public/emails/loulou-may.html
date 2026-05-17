@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us at LouLou | May 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ece8df;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .email-wrapper {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: #faf7f1;
+            box-shadow: 0 0 80px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: #1c2f36;
+            padding: 28px 48px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-preline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 13px;
+            color: #c9a87c;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: 10px;
+            color: #f8f6f3;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            color: #c9a87c;
+            margin-top: 12px;
+            text-transform: uppercase;
+        }
+
+        .header-rule {
+            width: 40px;
+            height: 1px;
+            background: rgba(201, 168, 124, 0.5);
+            margin: 14px auto 0;
+        }
+
+        .hero {
+            position: relative;
+            background: #0d0d0d;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 640px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .intro-section {
+            padding: 72px 56px 80px;
+            background: #faf7f1;
+            text-align: center;
+        }
+
+        .intro-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #8a6d3b;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .intro-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 1.05;
+            color: #1c2f36;
+            margin: 0 0 24px;
+            letter-spacing: -1px;
+        }
+
+        .intro-title em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #8a6d3b;
+        }
+
+        .intro-divider {
+            width: 48px;
+            height: 1px;
+            background: #c9a87c;
+            margin: 0 auto 28px;
+        }
+
+        .intro-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #3d4a50;
+            margin: 0 auto 32px;
+            max-width: 540px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold { background: #c9a87c; color: #1c2f36; border: 1px solid #c9a87c; }
+        .btn-outline-light { background: transparent; color: #f8f6f3; border: 1px solid #c9a87c; }
+        .btn-dark { background: #1c2f36; color: #f8f6f3; border: 1px solid #1c2f36; }
+        .btn-outline-dark { background: transparent; color: #1c2f36; border: 1px solid #1c2f36; }
+
+        .index-strip {
+            background: #1c2f36;
+            padding: 24px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 1px solid rgba(201, 168, 124, 0.15);
+        }
+
+        .index-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #c9a87c;
+        }
+
+        .index-items {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            color: rgba(248, 246, 243, 0.7);
+            text-transform: uppercase;
+        }
+
+        .index-items span { color: #c9a87c; margin: 0 8px; }
+
+        .section { padding: 80px 56px; background: #faf7f1; }
+
+        .section-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #c9a87c;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .section-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #8a6d3b;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            line-height: 1.1;
+            color: #1c2f36;
+            margin: 0 0 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+            color: #8a6d3b;
+        }
+
+        .section-body {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: #3d4a50;
+            line-height: 1.85;
+            margin: 0 0 28px;
+            max-width: 560px;
+        }
+
+        .section-divider {
+            width: 48px;
+            height: 1px;
+            background: #c9a87c;
+            margin: 0 0 28px;
+        }
+
+        .image-caption {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #6b5f52;
+            line-height: 1.6;
+            padding: 14px 0 28px;
+            max-width: 520px;
+        }
+
+        .lunch-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .lunch-stat-card {
+            background: #1c2f36;
+            color: #f8f6f3;
+            padding: 40px 36px;
+            text-align: center;
+            position: relative;
+        }
+
+        .lunch-stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #c9a87c;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .lunch-stat-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 400;
+            line-height: 1;
+            color: #f8f6f3;
+            margin-bottom: 4px;
+        }
+
+        .lunch-stat-price sup {
+            font-size: 28px;
+            vertical-align: top;
+            color: #c9a87c;
+            margin-right: 2px;
+            top: 14px;
+            position: relative;
+        }
+
+        .lunch-stat-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #d4cfc8;
+            margin-bottom: 24px;
+        }
+
+        .lunch-stat-divider {
+            width: 30px;
+            height: 1px;
+            background: rgba(201, 168, 124, 0.5);
+            margin: 0 auto 22px;
+        }
+
+        .lunch-stat-upgrade {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #c9a87c;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .lunch-stat-upgrade-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #f8f6f3;
+        }
+
+        .lunch-hours {
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(201, 168, 124, 0.2);
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: rgba(248, 246, 243, 0.7);
+            text-transform: uppercase;
+        }
+
+        .wine-section {
+            background: linear-gradient(135deg, #722f37 0%, #4a1d22 100%);
+            color: #f8f6f3;
+            padding: 80px 56px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wine-section::before {
+            content: '50';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 520px;
+            font-weight: 400;
+            color: rgba(248, 246, 243, 0.04);
+            letter-spacing: -20px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .wine-content { position: relative; z-index: 1; }
+
+        .wine-eyebrow {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #e8c99a;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .wine-big {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            line-height: 1.1;
+            color: #f8f6f3;
+            margin: 0 0 12px;
+            font-weight: 400;
+        }
+
+        .wine-big em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #e8c99a;
+            font-weight: 400;
+        }
+
+        .wine-tag {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: #e8c99a;
+            margin-bottom: 26px;
+        }
+
+        .wine-body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #e0d6c8;
+            line-height: 1.85;
+            max-width: 480px;
+            margin: 0 auto 34px;
+        }
+
+        .wine-hours {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #e8c99a;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+        }
+
+        .mothers-section { background: #faf7f1; padding: 100px 40px; }
+
+        .mothers-card {
+            background: #ffffff;
+            border: 1px solid #e0d8cb;
+            padding: 0;
+            position: relative;
+            box-shadow: 0 30px 80px -30px rgba(114, 47, 55, 0.2);
+        }
+
+        .mothers-ribbon {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #722f37;
+            color: #f8f6f3;
+            padding: 8px 22px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .mothers-body { padding: 56px 48px; text-align: center; }
+
+        .mothers-date {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #722f37;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .mothers-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1.05;
+            color: #1c2f36;
+            margin: 0 0 10px;
+        }
+
+        .mothers-title em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #722f37;
+        }
+
+        .mothers-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: #6b5f52;
+            margin-bottom: 28px;
+        }
+
+        .mothers-divider {
+            width: 60px;
+            height: 1px;
+            background: #c9a87c;
+            margin: 0 auto 28px;
+        }
+
+        .mothers-gift {
+            background: #f7ede0;
+            border: 1px dashed #c9a87c;
+            padding: 20px 28px;
+            display: inline-block;
+            margin-bottom: 28px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 17px;
+            color: #8a6d3b;
+        }
+
+        .mothers-gift strong {
+            font-family: 'Playfair Display', serif;
+            font-style: normal;
+            font-weight: 500;
+            color: #722f37;
+            display: block;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .brunch-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .brunch-content {
+            background: #1c2f36;
+            color: #f8f6f3;
+            padding: 60px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brunch-content .section-num { color: #c9a87c; }
+        .brunch-content .section-eyebrow { color: #c9a87c; }
+        .brunch-content .section-title { color: #f8f6f3; }
+        .brunch-content .section-title em { color: #e8c99a; }
+        .brunch-content .section-body { color: #d4cfc8; }
+        .brunch-content .section-divider { background: #c9a87c; }
+
+        .cabana-section { padding: 80px 56px; background: #f0ebe1; }
+
+        .cabana-note {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 13px;
+            color: #8a6d3b;
+            margin-top: 12px;
+            display: block;
+        }
+
+        .adelaide-section {
+            background: linear-gradient(160deg, #0d1216 0%, #1a2a30 100%);
+            color: #f8f6f3;
+            padding: 90px 56px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .adelaide-section::before {
+            content: '';
+            position: absolute;
+            top: 40px; right: 40px;
+            width: 120px; height: 120px;
+            border: 1px solid rgba(201, 168, 124, 0.2);
+            border-radius: 50%;
+        }
+
+        .adelaide-section::after {
+            content: '';
+            position: absolute;
+            bottom: 40px; left: 40px;
+            width: 80px; height: 80px;
+            border: 1px solid rgba(201, 168, 124, 0.15);
+            border-radius: 50%;
+        }
+
+        .adelaide-eyebrow {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #c9a87c;
+            margin-bottom: 14px;
+        }
+
+        .adelaide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 54px;
+            font-weight: 400;
+            line-height: 1.1;
+            color: #f8f6f3;
+            margin: 0 0 20px;
+        }
+
+        .adelaide-title em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #e8c99a;
+        }
+
+        .adelaide-body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #d4cfc8;
+            line-height: 1.85;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+
+        .events-section {
+            padding: 90px 56px;
+            background: #1c2f36;
+            color: #f8f6f3;
+        }
+
+        .events-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            color: #f8f6f3;
+            line-height: 1.1;
+            margin: 0 0 20px;
+        }
+
+        .events-title em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #e8c99a;
+        }
+
+        .events-body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #d4cfc8;
+            line-height: 1.85;
+            max-width: 540px;
+            margin-bottom: 32px;
+        }
+
+        .events-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(201, 168, 124, 0.2);
+            margin: 40px 0 36px;
+        }
+
+        .events-feature {
+            background: #1c2f36;
+            padding: 28px 20px;
+            text-align: center;
+        }
+
+        .events-feature-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: #c9a87c;
+            margin-bottom: 8px;
+        }
+
+        .events-feature-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            color: #f8f6f3;
+            text-transform: uppercase;
+        }
+
+        .events-secondary {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #c9a87c;
+            margin-top: 18px;
+            display: inline-block;
+        }
+
+        .events-secondary a {
+            color: #c9a87c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .menus-section {
+            padding: 90px 56px;
+            background: #faf7f1;
+            text-align: center;
+        }
+
+        .menus-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin: 32px 0;
+        }
+
+        .menu-chip {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #1c2f36;
+            padding: 10px 20px;
+            border: 1px solid #c9a87c;
+            background: #faf7f1;
+        }
+
+        .footer {
+            background: #0d1216;
+            padding: 64px 56px 40px;
+            text-align: center;
+            color: #d4cfc8;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            letter-spacing: 6px;
+            color: #f8f6f3;
+            margin-bottom: 8px;
+        }
+
+        .footer-address {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #a09a92;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            color: #a09a92;
+            text-transform: uppercase;
+        }
+
+        .footer-links a {
+            color: #c9a87c;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .mothers-image-real {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .lunch-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .lunch-image-square {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        .brunch-image-real {
+            width: 100%;
+            height: 100%;
+            min-height: 460px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .menus-hero {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .menus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .menus-grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        .wine-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://i.imgur.com/k2secLp.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        .adelaide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        .adelaide-grid img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+        }
+
+        .events-hero {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .header { padding: 24px 28px; }
+            .logo { font-size: 30px; letter-spacing: 6px; }
+            .hero-image { max-height: 420px; }
+            .intro-section { padding: 48px 28px 56px; }
+            .intro-title { font-size: 40px; }
+            .intro-sub { font-size: 18px; }
+            .section { padding: 56px 28px; }
+            .section-title { font-size: 32px; }
+            .index-strip { padding: 18px 28px; }
+            .index-items { font-size: 9px; letter-spacing: 1.5px; }
+            .lunch-grid { grid-template-columns: 1fr; gap: 32px; }
+            .lunch-stat-price { font-size: 56px; }
+            .wine-section { padding: 60px 28px; }
+            .wine-big { font-size: 38px; }
+            .wine-section::before { font-size: 320px; }
+            .mothers-section { padding: 60px 20px; }
+            .mothers-body { padding: 40px 24px; }
+            .mothers-title { font-size: 34px; }
+            .brunch-grid { grid-template-columns: 1fr; }
+            .brunch-content { padding: 48px 28px; }
+            .cabana-section { padding: 56px 28px; }
+            .adelaide-section { padding: 60px 28px; }
+            .adelaide-title { font-size: 36px; }
+            .events-section { padding: 60px 28px; }
+            .events-title { font-size: 34px; }
+            .events-features { grid-template-columns: 1fr; }
+            .menus-section { padding: 60px 28px; }
+            .menus-hero { height: 220px; margin-bottom: 28px; }
+            .events-hero { height: 220px; margin-bottom: 28px; }
+            .adelaide-grid { grid-template-columns: 1fr; }
+            .menus-grid { grid-template-columns: 1fr; gap: 10px; }
+            .mothers-image-real { height: 280px; }
+            .brunch-image-real { min-height: 300px; }
+            .footer { padding: 48px 28px 32px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="header">
+            <div class="header-preline">Petit Bistro &amp; Speakeasy</div>
+            <h1 class="logo">LouLou</h1>
+            <div class="header-rule"></div>
+            <div class="header-date">No. 05 &nbsp;&middot;&nbsp; May MMXXVI</div>
+        </div>
+
+        <div class="hero">
+            <img src="https://i.imgur.com/jd7L2oM.gif" alt="Join us at LouLou" class="hero-image">
+        </div>
+
+        <div class="index-strip">
+            <div class="index-label">Inside this issue</div>
+            <div class="index-items">
+                Lunch <span>&middot;</span> Wine <span>&middot;</span> Mother's Day <span>&middot;</span> Brunch <span>&middot;</span> Cabanas <span>&middot;</span> Adelaide's
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <div class="intro-eyebrow">The May Dispatch</div>
+            <h2 class="intro-title">Join Us at <em>LouLou</em></h2>
+            <div class="intro-divider"></div>
+            <p class="intro-sub">A month of Power Lunches &mdash; quick or long &mdash; weekend brunches, and a Mother's Day worth dressing for. The cabanas are open daily, and there's something happening downstairs at Adelaide's.</p>
+            <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-dark" style="margin-top: 10px;">Reserve a Table</a>
+        </div>
+
+        <div class="mothers-section">
+            <div class="mothers-card">
+                <div class="mothers-ribbon">Featured &nbsp;&middot;&nbsp; May 10</div>
+                <img src="https://i.imgur.com/w85PvFq.jpeg" alt="Mother's Day at LouLou" class="mothers-image-real">
+
+                <div class="mothers-body">
+                    <div class="mothers-date">Sunday, May the Tenth</div>
+                    <h2 class="mothers-title">For Her, on <em>Mother's Day</em></h2>
+                    <div class="mothers-sub">Brunch &amp; Dinner, service all day</div>
+                    <div class="mothers-divider"></div>
+
+                    <div class="mothers-gift" style="background:#722f37; border:1px solid #722f37; color:#f7ede0; padding:28px 36px; display:block; max-width:520px; margin:0 auto 20px;">
+                        <strong style="color:#f2d7a3; font-size:11px; letter-spacing:3px;">Dinner &nbsp;&middot;&nbsp; Our Gift to Mothers</strong>
+                        <span style="display:block; font-family:'Playfair Display', serif; font-style:normal; font-weight:500; font-size:26px; color:#ffffff; line-height:1.2; margin:6px 0 10px;">Unlimited wine for Mom.</span>
+                        <span style="display:block; font-style:italic; font-size:16px; color:#f7ede0; line-height:1.5;">Every mother dining with us on Sunday evening pours freely from a curated selection &mdash; all night, on the house.</span>
+                    </div>
+                    <div class="mothers-gift" style="display:block; max-width:520px; margin:0 auto 28px;">
+                        <strong>Brunch &nbsp;&middot;&nbsp; A Welcome Pour for Mom</strong>
+                        A complimentary glass of sparkling wine for every mother at brunch.
+                    </div>
+
+                    <p class="section-body" style="margin: 0 auto 20px; text-align: center;">Dinner is where the day lands &mdash; a long, candlelit service with the room at its best. Whole grilled branzino, duck leg confit, rib eye for two, and a wine list that knows the occasion. Earlier, brunch moves at its own pace: croissant French toast, smoked salmon, eggs Benedict, a bottle of something cold on ice.</p>
+                    <p class="section-body" style="margin: 0 auto 28px; text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #8a6d3b;">The good tables go first. Reserve early.</p>
+                    <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-dark">Reserve for Mother's Day</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="lunch-grid">
+                <div>
+                    <div class="section-num">I.</div>
+                    <div class="section-eyebrow">The Case for Lunch</div>
+                    <h2 class="section-title">The Power Lunch,<br><em>quick or long</em></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-body">Monday through Friday, 11 to 4. Thirty-five dollars for an appetizer and a main; forty-five with a glass of wine paired by the room. Built for the working-from-home day that needs a real meal in it &mdash; quick when you have a one o'clock, long when you don't.</p>
+                    <p class="section-body" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #8a6d3b;">Bring the client. Bring the laptop. Bring whoever needs to be charmed before two.</p>
+                    <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-dark" style="margin-top: 12px;">Book the Lunch</a>
+                </div>
+                <div class="lunch-right">
+                    <div class="lunch-stat-card">
+                        <div class="lunch-stat-label">With a Glass of Wine</div>
+                        <div class="lunch-stat-price"><sup>$</sup>45</div>
+                        <div class="lunch-stat-sub">appetizer, main &amp; a pour</div>
+                        <div class="lunch-stat-divider"></div>
+                        <div class="lunch-stat-upgrade">Prix Fixe</div>
+                        <div class="lunch-stat-upgrade-price">$35</div>
+                        <div class="lunch-hours">Mon &ndash; Fri &nbsp;&middot;&nbsp; 11am &ndash; 4pm</div>
+                    </div>
+                    <img src="https://i.imgur.com/aespTz6.jpeg" alt="Power Lunch at LouLou" class="lunch-image-square">
+                </div>
+            </div>
+        </div>
+
+        <div class="wine-section">
+            <div class="wine-bg"></div>
+            <div class="wine-content">
+                <div class="wine-eyebrow">Weekday Afternoons</div>
+                <h2 class="wine-big">Half Off the<br><em>Wine List</em></h2>
+                <div class="wine-tag">The list rotates &mdash; the hours don't.</div>
+                <p class="wine-body">Fifty percent off select bottles, Monday through Friday, 11 to 4. Sometimes a Sancerre worth lingering over. Sometimes a southern Rhone that wasn't in your plans. Ask the server what's on today.</p>
+                <div class="wine-hours">Mon &ndash; Fri &nbsp;&middot;&nbsp; 11 AM &ndash; 4 PM</div>
+                <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-outline-light">See You at Lunch</a>
+            </div>
+        </div>
+
+        <div class="brunch-grid">
+            <img src="https://i.imgur.com/3KA1u5i.jpeg" alt="Brunch at LouLou" class="brunch-image-real">
+            <div class="brunch-content">
+                <div class="section-num">IV.</div>
+                <div class="section-eyebrow">The Weekend Ritual</div>
+                <h2 class="section-title">Weekends are for <em>Brunch</em></h2>
+                <div class="section-divider"></div>
+                <p class="section-body">Saturdays and Sundays, the room fills up early and stays full. The LouLou Burger, eggs Benedict, the French Toast, a Bloody or two. Sit inside if it's raining; outside if it isn't.</p>
+                <p class="section-body" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: #e8c99a;">Bring the dog. Bring the friend you've been meaning to call.</p>
+                <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-gold" style="margin-top: 12px; align-self: flex-start;">Book Brunch</a>
+            </div>
+        </div>
+
+        <div class="cabana-section">
+            <div class="section-num">V.</div>
+            <div class="section-eyebrow">The Season Opens</div>
+            <h2 class="section-title">A Cabana on <em>Eighth Avenue</em></h2>
+            <div class="section-divider"></div>
+            <p class="section-body">The sidewalk cabanas are open for the season &mdash; private little rooms with a view of Chelsea passing by. Available all week, lunch through dinner. Best for long afternoons that turn into evenings, and evenings that nobody wants to end.</p>
+            <img src="https://i.imgur.com/AlSaz9M.jpeg" alt="Cabana on 8th Avenue" style="width:100%; height:auto; display:block; margin: 20px 0;">
+            <p class="image-caption">Cabanas on 8th, every day of the week. Reserve specifically &mdash; they go first.</p>
+            <a href="https://resy.com/cities/new-york-ny/venues/loulou" class="btn btn-dark">Request a Cabana</a>
+            <span class="cabana-note">Please specify "cabana" in your reservation notes.</span>
+        </div>
+
+        <div class="adelaide-section">
+            <div class="adelaide-eyebrow">&mdash; Downstairs, after dark &mdash;</div>
+            <h2 class="adelaide-title">Adelaide's <em>Salon</em></h2>
+            <div class="section-divider" style="background: #c9a87c;"></div>
+            <p class="adelaide-body">The speakeasy below LouLou runs weekly &mdash; live jazz, burlesque, handcrafted cocktails, the whole vintage proposition. Inspired by the travels of the explorer Isabella Bird &mdash; which is to say, the room takes itself only as seriously as it needs to.</p>
+            <img src="https://i.imgur.com/tJjuLx6.png" alt="Adelaide's Salon" style="width:100%; height:auto; display:block; margin-bottom: 24px;">
+            <p class="image-caption" style="color: #a09a92;">176 Eighth Avenue, after the bistro closes its doors.</p>
+            <a href="https://www.adelaide-salon.com/upcoming-events" class="btn btn-outline-light">See What's On This Week</a>
+            <div class="adelaide-grid">
+                <img src="https://i.imgur.com/ifZoEeg.jpeg" alt="Adelaide's">
+                <img src="https://i.imgur.com/uQzqIdO.jpeg" alt="Adelaide's">
+            </div>
+        </div>
+
+        <div class="events-section">
+            <img src="https://i.imgur.com/YALmGsP.jpeg" alt="The Room at LouLou" class="events-hero">
+            <div class="section-num" style="color: #c9a87c;">VII.</div>
+            <div class="section-eyebrow" style="color: #c9a87c;">The Full Room</div>
+            <h2 class="events-title">The Room, <em>Yours for the Night</em></h2>
+            <div class="section-divider"></div>
+            <p class="events-body">Private events at LouLou &mdash; the full bistro, the speakeasy below, or somewhere in between. Birthdays, rehearsal dinners, holiday parties, the kind of company gathering people actually attend. Seated dinners or standing receptions, intimate or full buyout, with the LouLou kitchen and a cocktail program by Zane Harris and Arpan Duttaroy.</p>
+
+            <div class="events-features">
+                <div class="events-feature"><div class="events-feature-num">I.</div><div class="events-feature-label">The Bistro</div></div>
+                <div class="events-feature"><div class="events-feature-num">II.</div><div class="events-feature-label">The Speakeasy</div></div>
+                <div class="events-feature"><div class="events-feature-num">III.</div><div class="events-feature-label">Full Buyout</div></div>
+            </div>
+
+            <a href="https://www.loulounyc.com/private-events/" class="btn btn-gold">Plan an Event</a>
+            <div class="events-secondary">
+                or <a href="https://images.getbento.com/accounts/24983d81ca32c008c5f6e7afac40d586/media/nvCUfN9WRdePLqMywqbA_Loulou%20Events%20Deck%202026%20(1).pdf">download the 2026 Events Deck (PDF)</a>
+            </div>
+        </div>
+
+        <div class="menus-section">
+            <img src="https://i.imgur.com/LmJoUl1.jpeg" alt="LouLou menus" class="menus-hero">
+            <div class="section-num" style="text-align: center;">VIII.</div>
+            <div class="section-eyebrow">The Full Set</div>
+            <h2 class="section-title" style="text-align: center;">Every Menu, <em>in One Place</em></h2>
+            <div class="section-divider" style="margin: 0 auto 28px;"></div>
+            <p class="section-body" style="margin: 0 auto 10px; text-align: center;">There is more than one way to spend an afternoon at LouLou. A cocktail program by Zane Harris and Arpan Duttaroy. A wine list worth a second glass, and Champagne worth the occasion. Late bites at the bar, the Power Lunch when you have ninety minutes, the raw bar when you don't have a plan.</p>
+
+            <div class="menus-list">
+                <span class="menu-chip">Brunch</span>
+                <span class="menu-chip">Lunch</span>
+                <span class="menu-chip">Dinner</span>
+                <span class="menu-chip">Cocktails</span>
+                <span class="menu-chip">Wine</span>
+                <span class="menu-chip">Late Night</span>
+            </div>
+
+            <a href="https://www.loulounyc.com/menus/" class="btn btn-outline-dark">Explore the Menus</a>
+
+            <div class="menus-grid">
+                <img src="https://i.imgur.com/gyDSyEe.jpeg" alt="LouLou">
+                <img src="https://i.imgur.com/nPoiKpp.jpeg" alt="LouLou">
+                <img src="https://i.imgur.com/iIEcJHE.jpeg" alt="LouLou">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">LOULOU</div>
+            <div class="footer-address">176 Eighth Avenue &nbsp;&middot;&nbsp; Chelsea, New York</div>
+            <div class="footer-links">
+                <a href="https://www.loulounyc.com/">Website</a> &middot;
+                <a href="https://resy.com/cities/new-york-ny/venues/loulou">Reserve</a> &middot;
+                <a href="https://www.adelaide-salon.com/">Adelaide's</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>January at Le Petit Village - Welcome 2026</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F5F3F0;
+            color: #2c2416;
+            line-height: 1.7;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FAF8F5;
+            box-shadow: 0 2px 12px rgba(44, 36, 22, 0.1);
+        }
+
+        .header-image {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .content-section {
+            padding: 25px 40px 50px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #F5F0E8 0%, #EDE7DD 100%);
+            border-bottom: 1px solid #D4C9B8;
+        }
+
+        .greeting {
+            font-size: 20px;
+            font-style: italic;
+            color: #8B7355;
+            margin: 0 0 24px 0;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #2c2416;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #5a4d3a;
+            margin: 0 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: #8B7355;
+            line-height: 1.7;
+            margin: 0 0 32px 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #3d3020;
+            margin: 40px 0 16px 0;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #5C3D2E;
+            margin: 24px 0 12px 0;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #8B7355;
+            font-weight: 500;
+            margin: 0 0 24px 0;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #5a4d3a;
+            margin: 0 0 16px 0;
+            text-align: center;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #E8E3DC;
+            margin: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .event-image {
+            width: 100%;
+            display: block;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #F5F0E8 0%, #EDE7DD 100%);
+            padding: 32px;
+            margin: 36px 0;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #D4C9B8;
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            font-size: 15px;
+            color: #3d3020;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FAF8F5 0%, #F5F0E8 100%);
+            padding: 36px;
+            margin: 36px 0;
+            border-radius: 12px;
+            border: 1px solid #E8E3DC;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .feature-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 24px auto;
+        }
+
+        .feature-list li {
+            font-size: 15px;
+            color: #5a4d3a;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #5C3D2E;
+            color: #FAF8F5;
+            text-decoration: none;
+            padding: 16px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin: 24px 0;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            border: 1px solid #4a2f22;
+        }
+
+        .cta-button:hover {
+            background-color: #4a2f22;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(92, 61, 46, 0.3);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .grid-item {
+            background: #FAF8F5;
+            border: 1px solid #E8E3DC;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(44, 36, 22, 0.1);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .grid-item-content {
+            padding: 20px;
+        }
+
+        .grid-item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3d3020;
+            margin: 0 0 8px 0;
+        }
+
+        .grid-item-text {
+            font-size: 14px;
+            color: #8B7355;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #5C3D2E;
+            color: #FAF8F5;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            margin: 12px 0;
+        }
+
+        .ritual-card {
+            background: linear-gradient(135deg, #F5F0E8 0%, #EDE7DD 100%);
+            padding: 28px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #D4C9B8;
+        }
+
+        .ritual-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #3d3020;
+            margin: 0 0 8px 0;
+            text-align: center;
+        }
+
+        .ritual-time {
+            font-size: 14px;
+            color: #8B7355;
+            font-weight: 500;
+            margin: 0 0 16px 0;
+            text-align: center;
+        }
+
+        .ritual-description {
+            font-size: 15px;
+            color: #5a4d3a;
+            line-height: 1.6;
+            text-align: center;
+            margin: 0 0 16px 0;
+        }
+
+        .closing-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #FAF8F5 0%, #F5F0E8 100%);
+        }
+
+        .closing-section h2 {
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: #2c2416;
+            color: #FAF8F5;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #A89277;
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-link {
+            color: #D4C9B8;
+            text-decoration: none;
+            font-size: 13px;
+            margin: 0 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #FAF8F5;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .hero-section {
+                padding: 40px 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .content-section {
+                padding: 20px 24px 40px;
+            }
+
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box,
+            .highlight-box,
+            .ritual-card {
+                padding: 24px;
+            }
+        }
+    a{pointer-events:none !important;cursor:default !important;}</style>
+</head>
+<body>
+    <div class="email-container">
+        <img src="https://i.imgur.com/hpAAIot.png" alt="Le Petit Village" class="header-image">
+
+        <div class="hero-section">
+            <p class="greeting">Bonjour,</p>
+            <h1>Welcome to January</h1>
+            <p class="hero-subtitle">An invitation to slow down, reconnect, and savor</p>
+            <p class="hero-description">At Le Petit Village, winter is not about staying in — it's about gathering warmly, intentionally, and beautifully. This month, discover our January rituals.</p>
+        </div>
+
+        <div class="content-section">
+            <!-- Dinner Section -->
+            <div class="section">
+                <h2>Dinner at Le Petit Village</h2>
+                <p class="subtitle">An Intentional Night Out</p>
+
+                <img src="https://i.imgur.com/T9C8vdD.jpeg" alt="Dinner at Le Petit Village" class="event-image">
+
+                <p>January dinners are chosen with care — and meant to be enjoyed without rush.</p>
+
+                <p>Our dining room offers an intimate escape from the winter chill, where classic French dishes, candlelit tables, and thoughtful hospitality create the perfect setting for dates, reunions, and meaningful evenings out.</p>
+
+                <div class="center">
+                    <a href="#" class="cta-button">Reserve Dinner →</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- L'Apéro Section -->
+            <div class="section">
+                <h2>Experience L'Apéro</h2>
+                <p class="subtitle">Weekdays | 4:00 PM – 6:00 PM</p>
+
+                <img src="https://i.imgur.com/3ZiGRGO.jpeg" alt="L'Apéro at Le Petit Village" class="event-image">
+
+                <p style="font-size: 18px; color: #5C3D2E; font-weight: 500; margin-bottom: 24px;">Where taste meets elegance.</p>
+
+                <p>Join us weekdays from 4–6PM for <strong>L'Apéro</strong>, our early evening ritual inspired by the French art of lingering. Thoughtfully crafted drinks, light bites, and a relaxed atmosphere designed to ease you into the evening.</p>
+
+                <div class="highlight-box">
+                    <h3>Featuring</h3>
+                    <ul class="feature-list">
+                        <li>$15 Signature Cocktails</li>
+                        <li>$10 Wines by the Glass</li>
+                        <li>$6 Beers</li>
+                    </ul>
+                    <p style="font-size: 14px; color: #8B7355; font-style: italic; margin-top: 20px;">No reservations needed — just arrive hungry and a little thirsty.</p>
+                </div>
+
+                <div class="center">
+                    <a href="#" class="cta-button">Join Us for L'Apéro →</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Weekend Brunch Section -->
+            <div class="section">
+                <h2>Weekend Brunch</h2>
+                <p class="subtitle">A Winter Essential</p>
+
+                <img src="https://i.imgur.com/8LAjOJk.jpeg" alt="Weekend Brunch" class="event-image">
+
+                <p>There's nothing quite like brunch in January — cozy mornings, comforting flavors, and time well spent.</p>
+
+                <p>Join us for a relaxed French brunch experience, perfect for catching up with friends, celebrating special moments, or simply enjoying a slow start to the day.</p>
+
+                <div class="info-box">
+                    <p style="font-weight: 600; font-size: 16px; color: #3d3020; margin-bottom: 16px;">Ideal for:</p>
+                    <p>Weekend gatherings</p>
+                    <p>Birthdays & small celebrations</p>
+                    <p>Groups of all sizes</p>
+                </div>
+
+                <div class="center">
+                    <a href="#" class="cta-button">Reserve Brunch →</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Brunch Tasting Section -->
+            <div class="section">
+                <h2>LPV Brunch Tasting</h2>
+                <p class="subtitle">A Little Bit of Everything</p>
+
+                <img src="https://i.imgur.com/asu7P2i.jpeg" alt="Brunch Tasting" class="event-image">
+
+                <p style="font-size: 17px; margin-bottom: 24px;">Curious to try it all? Our <strong>Brunch Tasting Menu</strong> is the perfect excuse.</p>
+
+                <p>Enjoy <strong>half portions</strong> of our brunch favorites, thoughtfully designed for discovery and sharing:</p>
+
+                <div class="highlight-box">
+                    <ul class="feature-list">
+                        <li>Avocado Toast</li>
+                        <li>Smoked Salmon Tartine</li>
+                        <li>Ratatouille Shakshuka</li>
+                        <li>Brioche French Toast</li>
+                    </ul>
+                    <p style="font-size: 14px; color: #8B7355; font-style: italic; margin-top: 20px;">Perfect for sharing — or not sharing at all.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Group Dining Section -->
+            <div class="section">
+                <h2>Group Dining</h2>
+                <p class="subtitle">A Table for Meaningful Moments</p>
+
+                <img src="https://i.imgur.com/oNOBx3d.png" alt="Group Dining" class="event-image">
+
+                <p>Celebrations don't stop in January — they simply become more personal.</p>
+
+                <p>From birthdays and work dinners to family gatherings, Le Petit Village offers a warm, elegant setting for groups looking to celebrate without the noise.</p>
+
+                <div class="center">
+                    <a href="#" class="cta-button">Plan Your Group Reservation →</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Dry January Section -->
+            <div class="section">
+                <div class="info-box">
+                    <h2 style="margin-top: 0;">Dry January, Elevated</h2>
+                    <p style="margin-top: 20px;">Whether you're participating in Dry January or simply exploring lighter options, our non-alcoholic cocktails are crafted with the same care, balance, and elegance as our classic offerings.</p>
+                    <p style="font-style: italic; color: #8B7355; margin-top: 16px;">Expect refined flavors, beautiful presentation, and the full bar experience — without compromise.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Wine Pairing Section -->
+            <div class="section">
+                <h2>Wine Pairing Dinner</h2>
+                <p class="subtitle">A Curated Culinary Evening</p>
+
+                <div class="two-column-grid" style="margin: 36px 0;">
+                    <img src="https://i.imgur.com/3ZiGRGO.jpeg" alt="Wine Pairing" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <img src="https://i.imgur.com/T9C8vdD.jpeg" alt="Wine Pairing" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                </div>
+
+                <p>Join us for a thoughtfully designed wine pairing experience, where seasonal dishes meet carefully selected wines in a guided, intimate setting.</p>
+
+                <p style="font-style: italic; color: #8B7355; margin-top: 24px;">A perfect evening for those looking to explore flavors, learn, and indulge with intention.</p>
+
+                <div class="center">
+                    <a href="#" class="cta-button">View Wine Pairing Details →</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Weekly Bar Rituals Section -->
+            <div class="section">
+                <h2>Weekly Bar Rituals</h2>
+                <p class="subtitle">Because winter nights deserve their own traditions</p>
+
+                <div class="ritual-card">
+                    <p class="ritual-title">🍸 Martini Wednesday</p>
+                    <p class="ritual-time">5:00 PM – 11:00 PM · Bar Only</p>
+                    <p class="ritual-description"><strong>2-for-1 Martinis</strong><br>Featuring Dirty, Dry, Vesper & Espresso Martinis</p>
+                </div>
+
+                <div class="ritual-card">
+                    <p class="ritual-title">🌸 Rosé Sunday Night</p>
+                    <p class="ritual-time">5:00 PM – 11:00 PM</p>
+                    <p class="ritual-description"><strong>50% Off Rosé Bottles</strong><br>The perfect way to ease into the week ahead.</p>
+                </div>
+
+                <div class="center" style="margin-top: 32px;">
+                    <a href="#" class="cta-button">Join Us at the Bar →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="closing-section">
+            <h2>See You This January</h2>
+            <p style="font-size: 17px; line-height: 1.7; max-width: 480px; margin: 24px auto;">We look forward to welcoming you this January — for familiar favorites, new rituals, and evenings that linger just a little longer.</p>
+            <p style="font-style: italic; font-size: 18px; color: #8B7355; margin-top: 32px;">À bientôt,</p>
+            <p style="font-weight: 600; font-size: 20px; color: #3d3020; margin-top: 8px;">Le Petit Village</p>
+        </div>
+
+        <div class="footer">
+            <p style="font-size: 16px; font-weight: 600; color: #FAF8F5; margin-bottom: 16px;">Le Petit Village</p>
+            <p>123 Greenwich Village · New York, NY</p>
+            <p>(212) 555-0100</p>
+
+            <div class="footer-links">
+                <a href="#" class="footer-link">Website</a>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+
+            <p style="margin-top: 32px; font-size: 12px;">© 2026 Le Petit Village. All rights reserved.</p>
+            <p style="font-size: 11px;"><a href="#" class="footer-link">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+</html>

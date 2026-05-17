@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring at Le Petit Village</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #EDE5DA;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .email-wrapper {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #FFFFFF;
+        }
+
+        /* ─── PREHEADER ─── */
+        .preheader {
+            display: none;
+            font-size: 1px;
+            color: transparent;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        /* ─── TOP BAR ─── */
+        .top-bar {
+            background: #18120D;
+            text-align: center;
+            padding: 11px 24px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            color: #B89468;
+            text-transform: uppercase;
+        }
+
+        /* ─── WORDMARK ─── */
+        .wordmark-bar {
+            background: #FFFFFF;
+            text-align: center;
+            padding: 38px 40px 32px;
+            border-bottom: 1px solid #EAE0D5;
+        }
+        .wordmark-label {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: #B89468;
+            margin-bottom: 12px;
+        }
+        .wordmark {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            letter-spacing: 0.14em;
+            color: #18120D;
+            font-weight: normal;
+        }
+
+        /* ─── HERO ─── */
+        .hero-wrap {
+            position: relative;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .hero-image {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            filter: brightness(0.68) saturate(0.92);
+        }
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(24,18,13,0.12) 0%,
+                rgba(24,18,13,0.06) 35%,
+                rgba(24,18,13,0.42) 70%,
+                rgba(24,18,13,0.72) 100%
+            );
+        }
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 60px 52px;
+            text-align: left;
+        }
+        .hero-eyebrow {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: #C9A97A;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .hero-title {
+            font-family: 'Georgia', serif;
+            font-size: 58px;
+            line-height: 1.0;
+            color: #FDFAF6;
+            font-weight: normal;
+            letter-spacing: -0.01em;
+            margin-bottom: 22px;
+        }
+        .hero-rule {
+            width: 36px;
+            height: 1px;
+            background: #C9A97A;
+            margin-bottom: 20px;
+        }
+        .hero-body {
+            font-family: 'Georgia', serif;
+            font-size: 15px;
+            line-height: 1.72;
+            color: #D9CEC1;
+            max-width: 380px;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .btn-ghost-light {
+            display: inline-block;
+            border: 1px solid rgba(201,169,122,0.7);
+            color: #F5EDE3;
+            background: rgba(24,18,13,0.3);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 38px;
+        }
+
+        /* ─── INTRO PULL QUOTE ─── */
+        .intro-quote {
+            background: #FAF7F3;
+            padding: 32px 60px;
+            text-align: center;
+            border-bottom: 1px solid #EAE0D5;
+        }
+        .intro-quote p {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.75;
+            color: #8C7C6E;
+            font-style: italic;
+        }
+
+        /* ─── RULE ─── */
+        .rule { height: 1px; background: #EAE0D5; }
+
+        /* ─── SECTIONS ─── */
+        .section {
+            padding: 56px 60px;
+            background: #FFFFFF;
+        }
+        .section-warm {
+            background: #FAF7F3;
+        }
+
+        .eyebrow {
+            display: block;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+            color: #B89468;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            font-weight: normal;
+            color: #18120D;
+            line-height: 1.18;
+            margin-bottom: 6px;
+            letter-spacing: 0.01em;
+        }
+        .section-sub {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: #B89468;
+            margin-bottom: 22px;
+            display: block;
+        }
+        .section-body {
+            font-family: 'Georgia', serif;
+            font-size: 15px;
+            line-height: 1.76;
+            color: #4A3F37;
+            margin-bottom: 20px;
+        }
+        .section-body-italic {
+            font-style: italic;
+            color: #7A6A5E;
+        }
+
+        /* ─── IMAGES ─── */
+        .img-full {
+            width: 100%;
+            display: block;
+            line-height: 0;
+        }
+        .img-tall {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .img-medium {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ─── SPLIT IMAGES ─── */
+        .split-wrap {
+            display: flex;
+            line-height: 0;
+        }
+        .split-wrap img {
+            width: 50%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ─── EVENT META TABLE ─── */
+        .event-meta {
+            display: flex;
+            border-top: 1px solid #EAE0D5;
+            border-bottom: 1px solid #EAE0D5;
+            margin: 28px 0 32px;
+        }
+        .meta-col {
+            flex: 1;
+            padding: 20px 12px;
+            text-align: center;
+        }
+        .meta-col + .meta-col {
+            border-left: 1px solid #EAE0D5;
+        }
+        .meta-label {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #B89468;
+            margin-bottom: 7px;
+        }
+        .meta-value {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            color: #18120D;
+            font-weight: normal;
+        }
+
+        /* ─── AVAILABILITY NOTE ─── */
+        .availability {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #A08878;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        /* ─── BRUNCH LIST ─── */
+        .dish-list {
+            list-style: none;
+            border-top: 1px solid #EAE0D5;
+            margin: 8px 0 24px;
+        }
+        .dish-list li {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            font-style: italic;
+            color: #4A3F37;
+            padding: 13px 0;
+            border-bottom: 1px solid #EAE0D5;
+            letter-spacing: 0.01em;
+        }
+
+        /* ─── APÉRO PRICING ─── */
+        .apero-row {
+            display: flex;
+            border: 1px solid #EAE0D5;
+            margin: 26px 0 30px;
+        }
+        .apero-col {
+            flex: 1;
+            padding: 26px 12px;
+            text-align: center;
+        }
+        .apero-col + .apero-col {
+            border-left: 1px solid #EAE0D5;
+        }
+        .apero-price {
+            font-family: 'Georgia', serif;
+            font-size: 30px;
+            color: #18120D;
+            font-weight: normal;
+            line-height: 1;
+            margin-bottom: 7px;
+        }
+        .apero-label {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #A08878;
+        }
+
+        /* ─── BUTTON STYLES ─── */
+        .btn-dark {
+            display: inline-block;
+            background: #18120D;
+            color: #F5EDE3;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+        }
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #18120D;
+            border: 1px solid #18120D;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 38px;
+        }
+        .btn-outline-warm {
+            display: inline-block;
+            background: transparent;
+            color: #F5EDE3;
+            border: 1px solid rgba(201,169,122,0.6);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 38px;
+        }
+        .btn-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ─── QUOTE BREAK ─── */
+        .quote-break {
+            background: #FAF7F3;
+            border-top: 1px solid #EAE0D5;
+            border-bottom: 1px solid #EAE0D5;
+            padding: 52px 70px;
+            text-align: center;
+        }
+        .quote-break p {
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            line-height: 1.55;
+            color: #18120D;
+            font-weight: normal;
+            font-style: italic;
+        }
+        .quote-break cite {
+            display: block;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #B89468;
+            margin-top: 18px;
+            font-style: normal;
+        }
+
+        /* ─── PRIVATE EVENTS ─── */
+        .private-wrap {
+            position: relative;
+            line-height: 0;
+        }
+        .private-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.6) saturate(0.88);
+        }
+        .private-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 60px;
+        }
+        .private-eyebrow {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: #C9A97A;
+            margin-bottom: 18px;
+        }
+        .private-title {
+            font-family: 'Georgia', serif;
+            font-size: 38px;
+            line-height: 1.18;
+            color: #FDFAF6;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+        .private-rule {
+            width: 36px;
+            height: 1px;
+            background: rgba(201,169,122,0.6);
+            margin: 0 auto 20px;
+        }
+        .private-body {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.72;
+            color: #C8BAA8;
+            max-width: 380px;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background: #18120D;
+            padding: 56px 60px 44px;
+            text-align: center;
+        }
+        .footer-rule {
+            height: 1px;
+            background: rgba(255,255,255,0.08);
+            margin: 30px 0;
+        }
+        .footer-logo {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            letter-spacing: 0.14em;
+            color: #F5EDE3;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .footer-address {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.22em;
+            color: #6E5E52;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .footer-social {
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: #6E5E52;
+            font-style: italic;
+            line-height: 1.65;
+        }
+        .footer-fine {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: #4A3C34;
+            line-height: 1.9;
+        }
+        .footer-fine a {
+            color: #6E5E52;
+            text-decoration: underline;
+        }
+
+        /* ─── COCKTAIL SECTION ─── */
+        .cocktail-section {
+            padding: 56px 60px 48px;
+            background: #FFFFFF;
+            text-align: center;
+        }
+    a{pointer-events:none !important;cursor:default !important;}</style>
+</head>
+<body>
+
+<!-- Preheader (email preview text) -->
+<span class="preheader">Spring is here. A five-course wine dinner, sunlit brunches, and effortless apéros await — your season starts at Le Petit Village.</span>
+
+<div class="email-wrapper">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">Spring 2026 &nbsp;&nbsp;·&nbsp;&nbsp; New York City</div>
+
+    <!-- WORDMARK -->
+    <div class="wordmark-bar">
+        <div class="wordmark-label">A Season of Beautiful Moments</div>
+        <div class="wordmark">Le Petit Village</div>
+    </div>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        kgwfDme.jpeg — The wine pairing dinner hero shot.
+        Warm candlelight, draped linens, wine glasses catching the glow.
+        It IS spring dining — intimate, golden, lush. The image already
+        speaks "effortless elegance." We position the title bottom-left
+        for an editorial, magazine-cover feel rather than centered.
+    -->
+    <div class="hero-wrap">
+        <img src="https://i.imgur.com/kgwfDme.jpeg" alt="Spring at Le Petit Village" class="hero-image">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">New York &nbsp;·&nbsp; Spring 2026</span>
+            <h1 class="hero-title">Spring,<br>Served<br>Beautifully</h1>
+            <div class="hero-rule"></div>
+            <p class="hero-body">As the city softens into spring, Le Petit Village invites you to slow down, sip thoughtfully, and savor each moment.</p>
+            <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-ghost-light">Reserve Your Table</a>
+        </div>
+    </div>
+
+    <!-- HERO SUB-CAPTION -->
+    <div class="intro-quote">
+        <p>From intimate wine dinners to sunlit brunches and effortless apéros —<br>this season is meant to be experienced.</p>
+    </div>
+
+    <!-- ══════════════════ SECTION 1: WINE PAIRING DINNER ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        hEJlAf3.jpeg — The wine cellar shot.
+        Stone walls, endless bottles, moody depth. For a $149/person
+        five-course pairing dinner, we need gravitas. The cellar signals
+        serious curation and sets the tone before a single word is read.
+        Full bleed at 400px creates a dramatic chapter-opening moment.
+    -->
+    <div class="rule"></div>
+    <img src="https://i.imgur.com/hEJlAf3.jpeg" alt="Wine Pairing Dinner" class="img-tall" style="object-position: center 60%;">
+    <div class="section">
+        <span class="eyebrow">One Night Only &nbsp;·&nbsp; April 8</span>
+        <h2 class="section-title">An Intimate Evening<br>of Wine &amp; Flavor</h2>
+        <span class="section-sub">5-Course Wine Pairing Dinner</span>
+
+        <div class="event-meta">
+            <div class="meta-col">
+                <div class="meta-label">Date</div>
+                <div class="meta-value">April 8</div>
+            </div>
+            <div class="meta-col">
+                <div class="meta-label">Time</div>
+                <div class="meta-value">6:30 PM</div>
+            </div>
+            <div class="meta-col">
+                <div class="meta-label">Per Guest</div>
+                <div class="meta-value">$149</div>
+            </div>
+        </div>
+
+        <p class="section-body">Join us for a refined five-course experience where each dish is thoughtfully paired to elevate the season's finest flavors.</p>
+        <p class="section-body">Hosted by Josh Leporé, this one-night-only dinner unfolds in a warm, candlelit setting — designed for conversation, discovery, and indulgence.</p>
+        <p class="section-body section-body-italic">Expect a guided journey through taste, where every pairing tells a story.</p>
+        <span class="availability">Limited seating available</span>
+        <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village/events/5-course-wine-pairing-dinner-2026-04-08" class="btn-dark">Reserve Your Seat</a>
+    </div>
+
+    <!-- ══════════════════ SECTION 2: BRUNCH ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        Fft6r0Y.jpeg (left) + I6l8rZn.jpeg (right) — Two dedicated brunch images
+        used as a diptych. Left is the atmospheric setting; right is the plated dish
+        close-up. Together they show the full brunch experience: place + plate.
+        The 50/50 split creates a tension that feels editorial — like a spread
+        across two magazine pages.
+    -->
+    <div class="rule"></div>
+    <div class="split-wrap">
+        <img src="https://i.imgur.com/Fft6r0Y.jpeg" alt="Brunch at Le Petit Village" style="object-position: center center;">
+        <img src="https://i.imgur.com/I6l8rZn.jpeg" alt="LPV Brunch Tasting" style="object-position: center center;">
+    </div>
+    <div class="section section-warm">
+        <span class="eyebrow">Weekend Brunch</span>
+        <h2 class="section-title">Brunch,<br>the LPV Way</h2>
+
+        <p class="section-body">Slow mornings. Bright flavors. A table meant to be shared.</p>
+
+        <span class="section-sub" style="margin-top: 4px;">The Brunch Tasting Experience</span>
+        <p class="section-body">Curious to try it all? This is your moment. Enjoy a curated tasting of our most loved dishes:</p>
+
+        <ul class="dish-list">
+            <li>Avocado Toast</li>
+            <li>Smoked Salmon Tartine</li>
+            <li>Ratatouille Shakshuka</li>
+            <li>Brioche French Toast</li>
+        </ul>
+
+        <p class="section-body section-body-italic" style="margin-bottom: 32px;">Perfect for sharing —<br>or keeping entirely to yourself.</p>
+        <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-outline">Explore Brunch</a>
+    </div>
+
+    <!-- ══════════════════ SECTION: EASTER BRUNCH ══════════════════ -->
+    <div class="rule"></div>
+    <img src="https://i.imgur.com/nF94DXp.jpeg" alt="Easter at Le Petit Village" class="img-tall" style="object-position: center center;">
+    <div class="section" style="background: #FFFBF5;">
+        <span class="eyebrow">This Sunday &nbsp;·&nbsp; April 5</span>
+        <h2 class="section-title">Easter Brunch<br>&amp; Egg Hunt</h2>
+        <span class="section-sub">A Festive Morning at Le Petit Village</span>
+
+        <div class="event-meta">
+            <div class="meta-col">
+                <div class="meta-label">Day</div>
+                <div class="meta-value">Sunday</div>
+            </div>
+            <div class="meta-col">
+                <div class="meta-label">Date</div>
+                <div class="meta-value">April 5</div>
+            </div>
+            <div class="meta-col">
+                <div class="meta-label">Service</div>
+                <div class="meta-value">Brunch</div>
+            </div>
+        </div>
+
+        <p class="section-body">Celebrate Easter with us this Sunday. We're bringing something playful and memorable to the table — an interactive egg hunt woven through the restaurant, paired with two festive cocktails crafted just for the occasion.</p>
+
+        <div style="border-top: 1px solid #EAE0D5; margin: 28px 0 24px;">
+            <div style="display: flex; gap: 0; border-bottom: 1px solid #EAE0D5;">
+                <div style="flex: 1; border-right: 1px solid #EAE0D5; overflow: hidden;">
+                    <img src="https://i.imgur.com/BU6vdM1.png" alt="Spring Spritz" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 18px 20px 22px 0;">
+                        <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: #B89468; margin-bottom: 8px;">Easter Special</div>
+                        <div style="font-family: 'Georgia', serif; font-size: 17px; color: #18120D; font-weight: normal; margin-bottom: 6px;">Spring Spritz</div>
+                        <div style="font-family: 'Georgia', serif; font-size: 13px; font-style: italic; color: #7A6A5E; line-height: 1.65;">Passion fruit · St-Germain<br>Prosecco · Fresh lemon &amp; mint</div>
+                    </div>
+                </div>
+                <div style="flex: 1; overflow: hidden;">
+                    <img src="https://i.imgur.com/TulgZTM.png" alt="Rosée de Fraise" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 18px 0 22px 20px;">
+                        <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: #B89468; margin-bottom: 8px;">Easter Special</div>
+                        <div style="font-family: 'Georgia', serif; font-size: 17px; color: #18120D; font-weight: normal; margin-bottom: 6px;">Rosée de Fraise</div>
+                        <div style="font-family: 'Georgia', serif; font-size: 13px; font-style: italic; color: #7A6A5E; line-height: 1.65;">Strawberry purée · Prosecco<br>Rose petal &amp; chocolate egg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #FAF7F3; border: 1px solid #EAE0D5; padding: 30px 32px; margin-bottom: 30px;">
+            <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9px; letter-spacing: 0.34em; text-transform: uppercase; color: #B89468; margin-bottom: 12px;">Interactive Egg Hunt</div>
+            <p style="font-family: 'Georgia', serif; font-size: 15px; line-height: 1.76; color: #4A3F37; margin-bottom: 12px;">Hidden throughout the restaurant — from the entrance to the patio — 100 eggs are waiting to be found. Each guest picks one. Inside: a playful surprise or a special reward.</p>
+            <p style="font-family: 'Georgia', serif; font-size: 14px; font-style: italic; color: #7A6A5E; line-height: 1.65; margin: 0;">Rewards include complimentary mimosas, cocktails, desserts, and more — redeemable immediately at your table.</p>
+        </div>
+
+        <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-dark">Reserve for Easter Brunch</a>
+    </div>
+
+    <!-- ══════════════════ SECTION 3: L'APÉRO ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        PKfaist.jpeg (left: cocktails) + 1mB3Bj7.jpeg (right: small plates).
+        The apéro is defined by TWO things: drinks and bites. These images
+        tell that story instantly without a single caption. Juxtaposing
+        the drink and the snack creates a visual shorthand for "the ritual."
+        A second editorial diptych — the brunch and apéro sections mirror
+        each other, giving the email a rhythmic visual structure.
+    -->
+    <div class="rule"></div>
+    <div class="split-wrap">
+        <img src="https://i.imgur.com/PKfaist.jpeg" alt="Cocktails at Le Petit Village">
+        <img src="https://i.imgur.com/1mB3Bj7.jpeg" alt="Small Plates at Le Petit Village">
+    </div>
+    <div class="section">
+        <span class="eyebrow">Weekdays &nbsp;·&nbsp; 4PM – 6PM</span>
+        <h2 class="section-title">L'Apéro —<br>Your New Ritual</h2>
+
+        <p class="section-body">Where elegance meets ease. Slip into the golden hours with cocktails, wine, and small bites designed for lingering just a little longer.</p>
+
+        <div class="apero-row">
+            <div class="apero-col">
+                <div class="apero-price">$15</div>
+                <div class="apero-label">Signature Cocktails</div>
+            </div>
+            <div class="apero-col">
+                <div class="apero-price">$10</div>
+                <div class="apero-label">Wine by the Glass</div>
+            </div>
+            <div class="apero-col">
+                <div class="apero-price">$6</div>
+                <div class="apero-label">Beers</div>
+            </div>
+        </div>
+
+        <p class="section-body section-body-italic" style="margin-bottom: 32px;">No reservations. No rush.<br>Just arrive.</p>
+        <div class="btn-row">
+            <a href="https://lepetitvillagenyc.com/menu" class="btn-dark">View Menu</a>
+            <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-outline">Reserve Now</a>
+        </div>
+    </div>
+
+    <!-- ══════════════════ SECTION 4: DINNER ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        T9C8vdD.jpeg — Dinner at LPV, moody and warm.
+        Rich table setting, soft candlelight. It reads unmistakably
+        as "a special evening." Placed at 320px, it's cinematic but
+        doesn't overpower — the section below it breathes with white space.
+    -->
+    <div class="rule"></div>
+    <img src="https://i.imgur.com/T9C8vdD.jpeg" alt="Dinner at Le Petit Village" class="img-medium" style="object-position: center 40%;">
+    <div class="section section-warm">
+        <span class="eyebrow">Every Evening</span>
+        <h2 class="section-title">Evenings at<br>Le Petit Village</h2>
+        <p class="section-body">As the sun sets, the room transforms — soft light, flowing wine, and a menu rooted in French tradition with a modern touch.</p>
+        <p class="section-body section-body-italic" style="margin-bottom: 32px;">Whether it's a quiet dinner or a long-awaited gathering, every table becomes an experience.</p>
+        <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-outline">Dine With Us</a>
+    </div>
+
+    <!-- ══════════════════ SECTION 5: COCKTAILS ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        9pFkGqs.jpeg — Wine selection close-up.
+        Intimate, still, artful. For the cocktails section we lean into
+        the quiet elegance of the image rather than competing with it.
+        A full-bleed image followed by a typographic "statement" in large
+        italic serif — this is the editorial pause in the email. No pricing,
+        no list. Just tone and mood.
+    -->
+    <div class="rule"></div>
+    <img src="https://i.imgur.com/9pFkGqs.jpeg" alt="Crafted Cocktails" class="img-medium" style="object-position: center 50%; filter: saturate(0.9) brightness(0.95);">
+    <div class="quote-break">
+        <p>"Crafted to be remembered — from timeless classics to signature creations, each cocktail is designed with balance, depth, and a touch of indulgence."</p>
+        <cite>Cocktails &amp; Bar Program</cite>
+    </div>
+    <div class="cocktail-section">
+        <p class="section-body section-body-italic" style="text-align:center; margin-bottom: 28px;">Come for one —<br>stay for another.</p>
+        <a href="https://resy.com/cities/new-york-ny/venues/le-petit-village" class="btn-dark">Reserve a Table</a>
+    </div>
+
+    <!-- ══════════════════ PRIVATE EVENTS ══════════════════ -->
+    <!--
+        CREATIVE DIRECTOR NOTE:
+        ExvetcF.jpeg — The private dining / events landscape image.
+        Wide, grand, warm. It fills the frame with the feeling of
+        a room designed to impress. The full-bleed overlay treatment
+        here is intentional — it closes the email on a note of
+        aspiration. Dark image, warm gold type, lots of breathing room.
+    -->
+    <div class="rule"></div>
+    <div class="private-wrap">
+        <img src="https://i.imgur.com/ExvetcF.jpeg" alt="Private Events at Le Petit Village" class="private-image">
+        <div class="private-overlay">
+            <span class="private-eyebrow">Private Events</span>
+            <h2 class="private-title">Celebrate,<br>the LPV Way</h2>
+            <div class="private-rule"></div>
+            <p class="private-body">From intimate celebrations to corporate gatherings, Le Petit Village offers a setting that feels both elevated and personal. Exceptional food. Thoughtful service. A space that leaves an impression.</p>
+            <a href="mailto:events@lepetitvillagenyc.com" class="btn-outline-warm">Plan Your Event</a>
+        </div>
+    </div>
+
+    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <div class="footer">
+        <div class="footer-logo">Le Petit Village</div>
+        <div class="footer-address">173 7th Ave S, New York</div>
+        <div class="footer-social">Follow along for seasonal moments and upcoming experiences</div>
+        <div class="footer-rule"></div>
+        <div class="footer-fine">
+            You're receiving this because you joined our guest list.
+            <br>
+            <a href="#">Unsubscribe</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#">View in browser</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
